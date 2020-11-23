@@ -8,7 +8,7 @@ const MAX_REGIONS_IN_TOP_REGIONS = 4;
 const MAX_PREFECTURES_IN_TOP_REGIONS = 4;
 
 const drawRegionChart = (chartName, element) => {
-  let svgURL = `https://data.covid19japan.com/charts/${chartName}`;
+  let svgURL = `https://covid19mn.web.app/charts/${chartName}`;
   fetch(svgURL)
     .then((response) => {
       if (response.status == 200) {

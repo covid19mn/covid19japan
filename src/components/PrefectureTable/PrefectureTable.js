@@ -7,7 +7,7 @@ const prefectureId = (prefectureName) => {
 
 const prefectureTrendChartURL = (prefectureName) => {
   let filename = prefectureId(prefectureName);
-  return `https://data.covid19japan.com/charts/${filename}.svg`;
+  return `https://covid19mn.web.app/charts/${filename}.svg`;
 };
 
 const prefectureTableRow = (id) => {
