@@ -1,4 +1,5 @@
 import {
+  mn,
   enUS,
   ja,
   es,
@@ -22,6 +23,7 @@ import {
 
 // Add new languages and their emoji flag here. Make sure the array indices line up.
 export const LANGUAGES = [
+  "mn",
   "en",
   "ja",
   "id",
@@ -43,6 +45,7 @@ export const LANGUAGES = [
   "fa",
 ];
 export const LANGUAGE_NAMES = [
+  "Mongolian",
   "English",
   "日本語",
   "Bahasa Indonesia",
@@ -66,6 +69,7 @@ export const LANGUAGE_NAMES = [
 
 // Add locales for date-fns here. Make sure the keys match the languages in LANGUAGES.
 export const LOCALES = {
+  mn: mn,
   en: enUS,
   ja: ja,
   es: es,
