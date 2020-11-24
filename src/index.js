@@ -36,6 +36,8 @@ import {
   drawTopRegions,
 } from "./components/RegionalCharts/RegionalCharts";
 
+const DEFAULT_LANGUAGE = "mn";
+
 const {
   toggleLangPicker,
   updateTooltipLang,
@@ -209,12 +211,9 @@ const populateLanguageSelector = () => {
 
 const initDataTranslate = () => {
   // load translation framework
-  i18next
-    .use(LanguageDetector)
-    .init(LANG_CONFIG)
-    .then(() => {
-      setLang(i18next.language);
-    });
+  i18next.init(LANG_CONFIG).then(() => {
+    setLang(DEFAULT_LANGUAGE);
+  });
 
   populateLanguageSelector();
 
