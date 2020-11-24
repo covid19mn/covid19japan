@@ -23,10 +23,10 @@ export const PREFECTURE_PAINT = ["match", ["get", "name"]];
 
 export const MAP_COLOR_BOUNDARIES = {
   1: COLOR_NONE,
-  50: COLOR_YELLOW,
-  100: COLOR_ORANGE,
-  500: COLOR_RED,
-  1000: COLOR_DARK_RED,
+  5: COLOR_YELLOW,
+  10: COLOR_ORANGE,
+  50: COLOR_RED,
+  100: COLOR_DARK_RED,
   Infinity: COLOR_DARK_BURGUNDY,
 };
 export const LEGEND_CLASSES = ["none", "one", "two", "three", "four", "five"];
