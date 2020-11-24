@@ -1,10 +1,10 @@
 
 {
   "covid-19-tracker": "Монголын КОВИД-19 Коронавирусын Тандалт",
-  "languages": "Хэлүүд:",
+  "languages": "Хэлний сонголт:",
   "last-updated": "Сүүлд шинэчлэгдсэн:",
   "kpi-active": "Идэвхитэй",
-  "kpi-active-tooltip": "Батлагдсан тооноос идгэсэн боло нас барсан тоог хасав",
+  "kpi-active-tooltip": "Батлагдсан тооноос эдгэрсэн болон нас барсан тоог хасав",
   "kpi-critical": "Хүнд нөхцөлд байгаа",
   "kpi-deceased": "Нас барсан",
   "kpi-tested": "Шинжилгээ хийсэн",
@@ -62,7 +62,6 @@
     "nagasaki-cruise": "Nagasaki Cruise Ship"
   },
   "prefectures": {
-    "Sukhbaatar": "Сүхбаатар",
     "Chingeltei": "Чингэлтэй",
     "Songinokhairkhan": "Сонгинохайрхан",
     "Bayangol": "Баянгол",
