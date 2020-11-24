@@ -5,14 +5,14 @@ const MAP_CONFIG = {
   style: "mapbox://styles/mapbox/light-v10?optimize=true",
   zoom: 3,
   minZoom: 3,
-  maxZoom: 7,
+  maxZoom: 15,
   center: {
     lng: 103.8467,
     lat: 46.8625,
   },
   maxBounds: [
-    { lat: 41.581958, lng: 86.874897 }, // SW
-    { lat: 52.148362, lng: 119.979018 }, // NE
+    { lat: 36.581958, lng: 86.874897 }, // SW
+    { lat: 57.148362, lng: 119.979018 }, // NE
   ],
 };
 
