@@ -27,7 +27,12 @@ const drawDailyIncreaseChart = (
     ConfirmedAvg: ["ConfirmedAvg"],
   };
 
-  const startIndex = timePeriod > 0 ? trends.length - timePeriod : 0;
+  let startIndex = timePeriod > 0 ? trends.length - timePeriod : 0;
+
+  if (startIndex < 0) {
+    startIndex = 0;
+  }
+
   for (let i = startIndex; i < trends.length; i++) {
     const row = trends[i];
 
