@@ -15,12 +15,45 @@ const addRelativeTimeLocalization = (lastUpdated, language) => {
 };
 
 const getLocalizedRelativeTime = (lastUpdated, language) => {
+  // mn is not supported by date-fns
+  if (language === "mn") {
+    return timeAgoMn(lastUpdated);
+  }
+
   const locale = LOCALES[language];
+
   return formatDistanceToNow(lastUpdated, {
     locale,
     addSuffix: true,
   });
 };
+
+export function timeAgoMn(date) {
+  let seconds = Math.floor((new Date() - date) / 1000);
+
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " жилийн өмнө";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " сарын өмнө";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " өдрийн өмнө";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " цагийн өмнө";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " минутийн өмнө";
+  }
+  return Math.floor(seconds) + " секундийн өмнө";
+}
 
 /**
  * @param {string} lastUpdatedString - MMM DD YYYY, HH:mm JST (e.g. Mar 29 2020, 15:53 JST)
