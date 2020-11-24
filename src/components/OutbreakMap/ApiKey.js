@@ -1,2 +1,4 @@
+// TODO: restrict to url after it's working
+
 export const MAPBOX_API_KEY =
-  "pk.eyJ1IjoicmV1c3RsZSIsImEiOiJjazZtaHE4ZnkwMG9iM3BxYnFmaDgxbzQ0In0.nOiHGcSCRNa9MD9WxLIm7g";
+  "pk.eyJ1Ijoia2hhbmdhbCIsImEiOiJja2h2Z210cHgwNTUzMzBua25qY2p6MjFnIn0.rRkQwQH5dlPI2BPuxRVzew";
