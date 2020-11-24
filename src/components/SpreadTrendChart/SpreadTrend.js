@@ -33,7 +33,12 @@ const drawTrendChart = (
     Tested: ["Tested"],
   };
 
-  const startIndex = timePeriod > 0 ? sheetTrend.length - timePeriod : 0;
+  let startIndex = timePeriod > 0 ? sheetTrend.length - timePeriod : 0;
+
+  if (startIndex < 0) {
+    startIndex = 0;
+  }
+
   for (let i = startIndex; i < sheetTrend.length; i++) {
     const row = sheetTrend[i];
 
