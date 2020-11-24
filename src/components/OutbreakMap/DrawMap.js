@@ -3,16 +3,16 @@ import { MAPBOX_API_KEY } from "./ApiKey";
 const MAP_CONFIG = {
   container: "map-container",
   style: "mapbox://styles/mapbox/light-v10?optimize=true",
-  zoom: 4,
-  minZoom: 3.5,
+  zoom: 3,
+  minZoom: 3,
   maxZoom: 7,
   center: {
-    lng: 139.11792973051274,
-    lat: 38.52245616545571,
+    lng: 103.8467,
+    lat: 46.8625,
   },
   maxBounds: [
-    { lat: 12.118318014416644, lng: 100.01240618330542 }, // SW
-    { lat: 59.34721256263214, lng: 175.3273570446982 }, // NE
+    { lat: 41.581958, lng: 86.874897 }, // SW
+    { lat: 52.148362, lng: 119.979018 }, // NE
   ],
 };
 
