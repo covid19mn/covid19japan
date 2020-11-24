@@ -19,7 +19,6 @@ import "custom-event-polyfill";
 
 // Add all non-polyfill deps below.
 import i18next from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import locI18next from "loc-i18next";
 
 import { calculateTotals } from "./data/helper";
@@ -27,7 +26,6 @@ import header from "./components/Header";
 import drawDailyIncreaseChart from "./components/DailyIncreaseChart";
 import drawKpis from "./components/Kpi";
 import mapDrawer from "./components/OutbreakMap";
-import PrefectureTable from "./components/PrefectureTable";
 import drawTrendChart from "./components/SpreadTrendChart";
 import { drawRegionTrajectoryChart } from "./components/TrajectoryChart/TrajectoryChart";
 import drawTravelRestrictions from "./components/TravelRestrictions";

@@ -30,7 +30,7 @@
 
   <meta
     name="description"
-    content="Live updates of the Coronavirus COVID-19 outbreak in Japan"
+    content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
   />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://covid19mn.netlify.app/" />
@@ -38,7 +38,7 @@
 
   <meta
     name="twitter:description"
-    content="Live updates of the Coronavirus COVID-19 outbreak in Japan"
+    content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
   />
   <meta property="og:title" content="Монголын КОВИД-19 Коронавирусын Тандалт" />
   <meta property="og:type" content="website" />
@@ -135,7 +135,7 @@
       </div>
 
       <div class="kpi-box" id="kpi-active" data-tippy-i18n="kpi-active-tooltip" data-tippy-placement="bottom" >
-        <div class="label"><span data-i18n="kpi-active">Active</span> &#9432;</div>     
+        <div class="label"><span data-i18n="kpi-active">Active</span></div>
         <div class="value"><div class="lds-dual-ring"></div></div>
         <div class="diff">&nbsp;</div>
         <div class="description"></div>
@@ -254,12 +254,16 @@
     </section>
   </div>
   <!-- JS -->
-  <script src="https://browser.sentry-cdn.com/5.12.1/bundle.min.js" integrity="sha384-y+an4eARFKvjzOivf/Z7JtMJhaN6b+lLQ5oFbBbUwZNNVir39cYtkjW1r6Xjbxg3" crossorigin="anonymous"></script>
-  <script src="https://browser.sentry-cdn.com/5.12.1/captureconsole.min.js"></script>
+  <script
+    src="https://browser.sentry-cdn.com/5.27.6/bundle.min.js"
+    integrity="sha384-rtZLZkLLKTQnK3HpcN1IG6wMYrx+O3GraPVH74SyT/gzvTfX6O/XLR7Ww65yd1w+"
+    crossorigin="anonymous"
+    ></script>
+  <script src="https://browser.sentry-cdn.com/5.27.6/captureconsole.min.js" integrity="sha384-F9eVzZTC8N8+p6mvSqBoTIuFHbKq2XFPn6ZtNKPkUBslMACSFOHy3/1XkET00hnC"></script>
   <script>
-    if (window.location.hostname == 'covid19japan.com') {
+    if (window.location.hostname == 'covid19mn.netlify.app') {
       Sentry.init({
-        dsn: 'https://1c7127f5f5b2432d99a5bf44a3b74d08@sentry.io/2967034',
+        dsn: 'https://bfc7be47074140f6a549f727fe487320@o481524.ingest.sentry.io/5530345',
         debug: false,
         blacklistUrls: [
           // Chrome extensions
@@ -281,12 +285,14 @@
   </script>  
   <script async src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2580539-41"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSSYC29G00"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-2580539-41');
+
+    gtag('config', 'G-PSSYC29G00');
   </script>
 
 </body>

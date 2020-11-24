@@ -54,7 +54,7 @@
   "deceased-percentage": "{{percent}}% нийт тохиолдлоос",
   "tested-percentage": "{{percent}}% эерэг.",
   "active-cases": "Идэвхитэй тохиолдлууд",
-  "no-active-cases": "Идэвхитэй тохиолдол байхгүй. 🎉",
+  "no-active-cases": "Идэвхитэй тохиолдол байхгүй.",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",
