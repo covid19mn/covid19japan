@@ -64,9 +64,9 @@ const drawMapPrefectures = (ddb, map, lang) => {
   document.getElementById("map-legend").innerHTML = drawLegend();
 
   // Start the Mapbox search expression
-  const prefecturePaint = [...PREFECTURE_PAINT];
+  let prefecturePaint = [...PREFECTURE_PAINT];
   // Go through all prefectures looking for cases
-  ddb.prefectures.map((prefecture) => {
+  ddb.regions.map((prefecture) => {
     let cases = parseInt(prefecture.active);
     if (cases > 0) {
       prefecturePaint.push(prefecture.name);
