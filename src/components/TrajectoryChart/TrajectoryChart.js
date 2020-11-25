@@ -15,7 +15,7 @@ const drawTrajectoryChart = (
   type
 ) => {
   const formatNumber = maybeIntlNumberFormat(lang);
-  const minimumConfirmed = 500;
+  const minimumConfirmed = 1;
   const filteredAreas = areas.filter((area) => {
     return area.confirmed >= minimumConfirmed;
   });
