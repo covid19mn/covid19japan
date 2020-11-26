@@ -25,21 +25,21 @@ body[data-direction=rtl] #page {
   direction: rtl;
 }
 
-#page, footer, .container  {
+#page, .container  {
   max-width: $breakpoint-1200-page-width;
   margin: 0 auto;
 }
 @media (min-width: $breakpoint-960) and (max-width: $breakpoint-1200-less-than) {
-  #page, footer { max-width: $breakpoint-960-page-width; }
+  #page, .container { max-width: $breakpoint-960-page-width; }
 }
 @media (min-width: $breakpoint-600) and (max-width: $breakpoint-960-less-than) {
-  #page, footer { max-width: $breakpoint-600-page-width; }
+  #page, .container { max-width: $breakpoint-600-page-width; }
 }
 @media (min-width: $breakpoint-500) and (max-width: $breakpoint-600-less-than) {
-  #page, footer { max-width: $breakpoint-500-page-width; }
+  #page, .container { max-width: $breakpoint-500-page-width; }
 }
 @media (max-width: $breakpoint-500) {
-  #page, footer { max-width: 90%;  }
+  #page, .container { max-width: 90%;  }
 }
 
 // Title styles
@@ -136,12 +136,12 @@ a, a:hover, a:visited {
     //align-items: stretch;
   }
   #trend-chart-container { 
-    margin: 10px;
+    margin-right: 0.75rem;
     flex: 1;
     width: 50%;
   }
   #daily-increase-container { 
-    margin: 10px;
+    margin-left: 0.75rem;
     flex: 1;
     width: 50%;
   }
@@ -227,12 +227,16 @@ a, a:hover, a:visited {
 @import 'src/components/OutbreakMap/map';
 @import 'src/components/PrefectureTable/prefectureTable';
 
-#helpful-links,
-#travel-restrictions {
-  max-width: 800px;
-  margin: 0 auto;
+#helpful-links {
+  align-self: flex-end;
+  text-align: right;
+
+  ul {
+    list-style: none;
+  }
+
   li {
-    margin-block-end: 20px;
+    margin-block-end: 8px;
     word-wrap: break-word;
   }
 }
@@ -248,32 +252,39 @@ a, a:hover, a:visited {
 #footer-container {
   background: white;
   margin: 0;
+
+  .last-updated {
+    align-self: flex-end;
+    text-align: right;
+    flex-grow: 1;
+  }
+
 }
 
-footer {
-  margin: 0 auto;
-  padding: 1rem;
-
-  p {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    margin: 0 0 1rem;
-  }
-
-  a, a:active {
-    color: #1976d2 !important;
-  }
-  .avatar {
-    text-decoration: none;
-    img {
-      height: 50px;
-      width: 50px;
-      margin: 5px;
-      border-radius: 50%;
-    }
-  }
-}
-
+// footer {
+//   margin: 0 auto;
+//   padding: 1rem;
+//
+//   p {
+//     font-size: 0.9rem;
+//     line-height: 1.2rem;
+//     margin: 0 0 1rem;
+//   }
+//
+//   a, a:active {
+//     color: #1976d2 !important;
+//   }
+//   .avatar {
+//     text-decoration: none;
+//     img {
+//       height: 50px;
+//       width: 50px;
+//       margin: 5px;
+//       border-radius: 50%;
+//     }
+//   }
+// }
+//
 body {
   &.embed {
     .embed-hide {

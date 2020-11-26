@@ -10,6 +10,7 @@ import {
   COLOR_TESTED_DAILY,
   DEFAULT_CHART_TIME_PERIOD,
   COLOR_CONFIRMED,
+  CHART_TITLE_PADDING,
 } from "../../data/constants";
 
 const drawDailyIncreaseChart = (
@@ -56,6 +57,12 @@ const drawDailyIncreaseChart = (
 
   dailyIncreaseChart = c3.generate({
     bindto: "#daily-increase-chart",
+    title: {
+      show: false,
+      text: i18next.t("new-cases-by-day"),
+      position: "top-left", // top-left, top-center and top-right
+      padding: CHART_TITLE_PADDING,
+    },
     data: {
       x: "Date",
       colors: {

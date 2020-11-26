@@ -65,8 +65,8 @@ const drawLastUpdated = (lastUpdatedString, currentLanguage) => {
     return;
   }
 
-  const display = document.getElementById("last-updated-time");
-  if (!display) {
+  const displays = document.getElementsByClassName("last-updated-time");
+  if (displays.length === 0) {
     return;
   }
 
@@ -84,7 +84,9 @@ const drawLastUpdated = (lastUpdatedString, currentLanguage) => {
     }
   } catch (e) {
     // Fall back to raw value on failed parse
-    display.textContent = lastUpdatedString;
+    for (let display of displays) {
+      display.textContent = lastUpdatedString;
+    }
     return;
   }
 
@@ -92,13 +94,15 @@ const drawLastUpdated = (lastUpdatedString, currentLanguage) => {
     addRelativeTimeLocalization(lastUpdated, language);
   }
 
-  display.setAttribute("title", lastUpdatedString);
-  display.setAttribute("data-i18n", "last-updated-time");
-  display.textContent = i18next.getResource(
-    currentLanguage,
-    "translation",
-    "last-updated-time"
-  );
+  for (let display of displays) {
+    display.setAttribute("title", lastUpdatedString);
+    display.setAttribute("data-i18n", "last-updated-time");
+    display.textContent = i18next.getResource(
+      currentLanguage,
+      "translation",
+      "last-updated-time"
+    );
+  }
 };
 
 export default drawLastUpdated;

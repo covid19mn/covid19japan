@@ -102,9 +102,9 @@
               <h1 data-i18n="covid-19-tracker" class="m-0">
                 Монголын КОВИД-19 Коронавирусын Тандалт
               </h1>
-              <div id="last-updated" class="my-1">
+              <div id="last-updated" class="last-updated my-1">
                 <span data-i18n="last-updated">Last Updated:</span>
-                <strong id="last-updated-time">-</strong>
+                <strong id="last-updated-time" class="last-updated-time">-</strong>
               </div>
             </div>
             <div class="lang-picker">
@@ -273,7 +273,6 @@
 
       <section id="national-charts" class="embed-hide">
         <section id="trend-chart-container" class="embed-hide">
-          <h4 data-i18n="outbreak-spread-trend">Total Cases</h4>
           <div id="trend-chart-box">
             <div id="trend-chart">
               <div class="loader"><div class="lds-dual-ring"></div></div>
@@ -282,7 +281,6 @@
         </section>
 
         <section id="daily-increase-container" class="embed-hide">
-          <h4 data-i18n="new-cases-by-day">Daily Confirmed Cases</h4>
           <div id="daily-increase-chart-box">
             <div id="daily-increase-chart">
               <div class="loader"><div class="lds-dual-ring"></div></div>
@@ -330,35 +328,63 @@
         </svg>
       </section>
 
-      <section id="regional-trajectory-container" class="embed-hide">
-        <h4 data-i18n="confirmed-case-trajectories-by-region">
-          Confirmed Case Trajectories by Region
-        </h4>
+      <section id="regional-trajectory-container" class="embed-hide mt-3">
         <div id="regional-trajectory-chart-box">
           <div id="regional-trajectory">
             <div class="loader"><div class="lds-dual-ring"></div></div>
           </div>
         </div>
       </section>
-
-      <section id="helpful-links" class="embed-hide">
-        <a name="links">
-          <h4 data-i18n="helpful-links">Helpful Links</h4>
-        </a>
-        <ul>
-          <li>
-            <a href="https://mohs.mn/news/t/6">
-              Mongolian Ministry of Health
-            </a>
-          </li>
-          <li>
-            <a href="https://covid19.mohs.mn">
-              Covid 19 information site by Ministry of Health
-            </a>
-          </li>
-        </ul>
-      </section>
     </div>
+
+    <footer class="bg-white embed-hide b-bottom mt-5">
+      <div class="container">
+        <div>
+          <div class="links-wrapper">
+            <h3 data-i18n="covid-19-tracker" class="m-0">
+              Монголын КОВИД-19 Коронавирусын Тандалт
+            </h1>
+
+            <section id="helpful-links" class="embed-hide">
+              <a name="links">
+                <h4 data-i18n="helpful-links" class="soft-text">Helpful Links</h4>
+              </a>
+              <ul>
+                <li>
+                  <a href="https://mohs.mn/news/t/6">
+                    Mongolian Ministry of Health
+                  </a>
+                </li>
+                <li>
+                  <a href="https://covid19.mohs.mn">
+                    Covid 19 information site by Ministry of Health
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="credits-wrapper mb-5">
+          <div>
+            <p>
+              Built by <a href="https://twitter.com/reustle" target="_blank">Shane Reustle</a> and many more code and data contributors.
+            </p>
+            <p>
+              Supported by <a href="https://reustle.co" target="_blank">Reustle K.K.</a>, <a href="https://mapbox.com/community/" target="_blank">Mapbox</a>, <a href="https://sentry.io" target="_blank">Sentry.io</a>, and <a href="https://netlify.com/" target="_blank">Netlify</a>.
+              Data sourced from Prefectural Governments and MHLW (<a href="https://github.com/reustle/covid19japan-data/">Full Details</a>.)
+            </p>
+            <p style="margin-bottom:0">
+              Contribute to <a href="https://github.com/reustle/covid19japan">covid19japan on GitHub</a>
+            </p>
+          </div>
+
+          <div id="last-updated" class="last-updated">
+            <span data-i18n="last-updated">Last Updated:</span>
+            <strong id="last-updated-time" class="last-updated-time">-</strong>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- JS -->
     <script
       src="https://browser.sentry-cdn.com/5.27.6/bundle.min.js"

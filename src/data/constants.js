@@ -42,6 +42,13 @@ export const LANG_CONFIG = {
   resources: languageResources,
 };
 
+export const CHART_TITLE_PADDING = {
+  top: 0,
+  right: 0,
+  bottom: 20,
+  left: 20,
+};
+
 export const DDB_COMMON = {
   prefectures: undefined,
   trend: undefined,

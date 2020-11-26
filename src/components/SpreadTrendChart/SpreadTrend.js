@@ -12,6 +12,7 @@ import {
   COLOR_RECOVERED,
   COLOR_DECEASED,
   DEFAULT_CHART_TIME_PERIOD,
+  CHART_TITLE_PADDING,
 } from "../../data/constants";
 
 const drawTrendChart = (
@@ -61,6 +62,12 @@ const drawTrendChart = (
 
   trendChart = c3.generate({
     bindto: "#trend-chart",
+    title: {
+      show: false,
+      text: i18next.t("outbreak-spread-trend"),
+      position: "top-left", // top-left, top-center and top-right
+      padding: CHART_TITLE_PADDING,
+    },
     data: {
       x: "Date",
       color: (color, d) => {

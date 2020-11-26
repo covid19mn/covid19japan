@@ -1,6 +1,7 @@
 import * as c3 from "c3";
 import * as d3 from "d3";
 import i18next from "i18next";
+import { CHART_TITLE_PADDING } from "../../data/constants";
 
 import { maybeIntlNumberFormat } from "../../i18n";
 
@@ -71,6 +72,12 @@ const drawTrajectoryChart = (
   }
 
   trajectoryChart = c3.generate({
+    title: {
+      show: false,
+      text: i18next.t("confirmed-case-trajectories-by-region"),
+      position: "top-left", // top-left, top-center and top-right
+      padding: CHART_TITLE_PADDING,
+    },
     bindto: bindElement,
     size: {
       height: 500,
