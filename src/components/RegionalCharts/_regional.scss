@@ -46,6 +46,11 @@ $breakpoint-600-full-box-width: $breakpoint-600-page-width - $box-margin * 2;
   flex-direction: row;
   flex-wrap: nowrap;
 
+  border-radius: $box-border-radius;
+  border: $color-box-border;
+  background: $color-box-background;
+  box-shadow: $color-box-shadow;
+
   .vitals {
     width: 11rem;
     padding-left: 0.5rem;
@@ -212,7 +217,7 @@ a.region-top-link {
   background: $color-box-background;
   box-shadow: $color-box-shadow;
   border-radius: $box-border-radius;
-  margin: 5px 5px;
+  margin: 0.5rem 0;
   padding: 0.8rem;
 
   .value, .diff {
