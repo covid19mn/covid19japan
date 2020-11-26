@@ -6,14 +6,14 @@ $box-margin: 0;
 $kpi-wrapper-border: 1px;
 
 // KPI 5-up layout
-$breakpoint-1200-box-width: ($breakpoint-1200-page-width - $kpi-wrapper-border * 2) / 5;
+$breakpoint-1200-box-width: $breakpoint-1200-page-width / 5;
 
 // KPI 4-up layout
-$breakpoint-960-box-width: ($breakpoint-960-page-width - $kpi-wrapper-border * 2) / 4;
-$breakpoint-960-box-width-double: $breakpoint-960-box-width * 2 - $kpi-wrapper-border * 2 + $box-margin * 2;
+$breakpoint-960-box-width: $breakpoint-960-page-width / 4;
+$breakpoint-960-box-width-double: $breakpoint-960-box-width * 2 + $box-margin * 2;
 
 // KPI 3-up layout 
-$breakpoint-600-box-width: ($breakpoint-600-page-width - $kpi-wrapper-border * 2) / 3;
+$breakpoint-600-box-width: $breakpoint-600-page-width / 3;
 
 // KPI 2-up layout for below $breakpoint-500 (box-width is not fixed, but 
 // relative to screen width.)
@@ -21,10 +21,8 @@ $breakpoint-600-box-width: ($breakpoint-600-page-width - $kpi-wrapper-border * 2
 #kpi {
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 4px 16px 40px 10px rgba(2, 13, 34, 0.025);
-  border-left: 1px solid #E6E6E7;
-  border-right: 1px solid #E6E6E7;
-  border-radius: 16px;
+  // box-shadow: 4px 16px 40px 10px rgba(2, 13, 34, 0.025);
+  // border-radius: 16px;
 }
 
 #kpi.loading {
@@ -35,16 +33,11 @@ $breakpoint-600-box-width: ($breakpoint-600-page-width - $kpi-wrapper-border * 2
 
 .kpi-box {
   background-color: #fff;
-  border-bottom: 1px solid #E6E6E7;
-  border-top: 1px solid #E6E6E7;
-
+  border: 1px solid #E6E6E7;
 
   // background: $color-box-background;
   // box-shadow: $color-box-shadow;
   // border-radius: $box-border-radius;
-  &:not(:last-child) {
-    border-right: 1px solid #E6E6E7;
-  }
 
   &:last-child {
     border-top-right-radius: $box-border-radius;
@@ -150,14 +143,9 @@ $breakpoint-600-box-width: ($breakpoint-600-page-width - $kpi-wrapper-border * 2
   }
 
   .kpi-box#kpi-tested {
-    height: 7rem;
     width: $breakpoint-960-box-width-double;
-    display: flex;
-    flex-direction: row;
-    .vitals {
-      width: $breakpoint-960-box-width-double / 2;
-    }
     .chart-container {
+      align-self: flex-end;
       width: 200px;
     }
   }
