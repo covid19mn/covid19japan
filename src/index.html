@@ -116,11 +116,13 @@
     </header>
 
     <div id="page">
-      <section id="kpi" class="loading">
+      <section id="kpi" class="loading my-3">
         <div class="kpi-box" id="kpi-confirmed">
+          <div class="value-wrapper">
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+          </div>
           <div class="label" data-i18n="kpi-confirmed">Confirmed</div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
           <div class="description"></div>
           <svg
             style="width: 0; height: 0; position: absolute;"
@@ -140,9 +142,11 @@
         </div>
 
         <div class="kpi-box" id="kpi-recovered">
+          <div class="value-wrapper">
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+          </div>
           <div class="label" data-i18n="kpi-recovered">Recovered</div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
           <div class="description"></div>
           <svg
             style="width: 0; height: 0; position: absolute;"
@@ -162,9 +166,11 @@
         </div>
 
         <div class="kpi-box" id="kpi-critical">
+          <div class="value-wrapper">
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+          </div>
           <div class="label" data-i18n="kpi-critical">Critical</div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
           <div class="description"></div>
           <svg
             style="width: 0; height: 0; position: absolute;"
@@ -184,9 +190,11 @@
         </div>
 
         <div class="kpi-box" id="kpi-deceased">
+          <div class="value-wrapper">
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+          </div>
           <div class="label" data-i18n="kpi-deceased">Deaths</div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
           <div class="description"></div>
           <svg
             style="width: 0; height: 0; position: absolute;"
@@ -211,9 +219,11 @@
           data-tippy-i18n="kpi-active-tooltip"
           data-tippy-placement="bottom"
         >
+          <div class="value-wrapper">
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+          </div>
           <div class="label"><span data-i18n="kpi-active">Active</span></div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
           <div class="description"></div>
           <svg
             style="width: 0; height: 0; position: absolute;"
@@ -233,10 +243,12 @@
         </div>
 
         <div class="kpi-box" id="kpi-tested">
-          <div class="vitals">
-            <div class="label" data-i18n="kpi-tested">Tested</div>
+          <div class="value-wrapper">
             <div class="value"><div class="lds-dual-ring"></div></div>
             <div class="diff">&nbsp;</div>
+          </div>
+          <div class="vitals">
+            <div class="label" data-i18n="kpi-tested">Tested</div>
             <div class="description"></div>
           </div>
           <div class="chart-container">
@@ -256,13 +268,6 @@
               Tests per day
             </div>
           </div>
-        </div>
-
-        <div class="kpi-box" id="kpi-critical-short">
-          <div class="label" data-i18n="kpi-critical">Critical</div>
-          <div class="value"><div class="lds-dual-ring"></div></div>
-          <div class="diff">&nbsp;</div>
-          <div class="description"></div>
         </div>
       </section>
 
