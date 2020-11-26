@@ -1,299 +1,411 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimal-ui"
+    />
+    <title>Монголын КОВИД-19 Коронавирусын Тандалт</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-  <title>Монголын КОВИД-19 Коронавирусын Тандалт</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link -->
+    <!--   href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&#38;display=swap" -->
+    <!--   rel="stylesheet" -->
+    <!-- /> -->
 
-  <link rel="shortcut icon" type="image/png" href="https://covid19japan.com/static/favicon.png" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://covid19japan.com/static/favicon.png"
+    />
 
+    <!-- Size specific PNG faviocons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/icons/favicon-32x32.png?v=1586005472"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/icons/favicon-16x16.png?v=1586005472"
+    />
 
-  <!-- Size specific PNG faviocons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png?v=1586005472">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png?v=1586005472">
+    <!-- iOS icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/icons/apple-touch-icon.png?v=1586005472"
+    />
 
-  <!-- iOS icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png?v=1586005472">
-  
-  <!-- MacOS Icon for Safari & Touchbar -->
-  <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg?v=1586005472" color="#8ecafb">
-  
-  <!-- Android Manifest -->
-  <link rel="manifest" href="/static/icons/site.webmanifest?v=1586005472">
-  
-  <!-- Windows Browserconfig -->
-  <meta name="msapplication-TileColor" content="#8ecafb">
-  <meta name="msapplication-config" content="/static/icons/browserconfig.xml?v=1586005472">
-  <meta name="theme-color" content="#8ecafb">
+    <!-- MacOS Icon for Safari & Touchbar -->
+    <link
+      rel="mask-icon"
+      href="/static/icons/safari-pinned-tab.svg?v=1586005472"
+      color="#8ecafb"
+    />
 
-  <meta
-    name="description"
-    content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
-  />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://covid19mn.netlify.app/" />
-  <meta name="twitter:title" content="Монголын КОВИД-19 Коронавирусын Тандалт" />
+    <!-- Android Manifest -->
+    <link rel="manifest" href="/static/icons/site.webmanifest?v=1586005472" />
 
-  <meta
-    name="twitter:description"
-    content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
-  />
-  <meta property="og:title" content="Монголын КОВИД-19 Коронавирусын Тандалт" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://covid19mn.netlify.app/" />
-  <meta
-    property="og:image"
-    content="https://covid19mn.netlify.app/static/map.jpg"
-  />
-  <meta
-    property="og:description"
-    content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
-  />
-</head>
-<body class="<%= htmlWebpackPlugin.options.bodyClass %>">
-  <div id="page">
-    <header class="embed-hide">
-      <h1 data-i18n="covid-19-tracker">Монголын КОВИД-19 Коронавирусын Тандалт</h1>
-      <div class="toolbar">
-        <div class="lang-picker">
-          <span class="lang-picker-title" data-i18n="languages">Languages:</span>
-          <span class="lang-picker-languages">
-          </span>
-        </div>
-        <div id="last-updated">
-          <span data-i18n="last-updated">Last Updated:</span> <strong id="last-updated-time">-</strong>
+    <!-- Windows Browserconfig -->
+    <meta name="msapplication-TileColor" content="#8ecafb" />
+    <meta
+      name="msapplication-config"
+      content="/static/icons/browserconfig.xml?v=1586005472"
+    />
+    <meta name="theme-color" content="#8ecafb" />
+
+    <meta
+      name="description"
+      content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://covid19mn.netlify.app/" />
+    <meta
+      name="twitter:title"
+      content="Монголын КОВИД-19 Коронавирусын Тандалт"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
+    />
+    <meta
+      property="og:title"
+      content="Монголын КОВИД-19 Коронавирусын Тандалт"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://covid19mn.netlify.app/" />
+    <meta
+      property="og:image"
+      content="https://covid19mn.netlify.app/static/map.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Монголын КОВИД-19 Коронавирусын Тархалтын Шууд Мэдээлэл"
+    />
+  </head>
+  <body class="<%= htmlWebpackPlugin.options.bodyClass %>">
+    <header class="bg-white embed-hide b-bottom">
+      <div class="container">
+        <div class="my-5">
+          <div class="toolbar">
+            <div>
+              <h1 data-i18n="covid-19-tracker" class="m-0">
+                Монголын КОВИД-19 Коронавирусын Тандалт
+              </h1>
+              <div id="last-updated" class="my-1">
+                <span data-i18n="last-updated">Last Updated:</span>
+                <strong id="last-updated-time">-</strong>
+              </div>
+            </div>
+            <div class="lang-picker">
+              <span class="lang-picker-languages"> </span>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-  
-    <section id="kpi" class="loading">
-      <div class="kpi-box" id="kpi-confirmed">
-        <div class="label" data-i18n="kpi-confirmed">Confirmed</div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-          <linearGradient id="kpi-confirmed-chart-gradient" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(244,67,54, 0.6)" />
-            <stop offset="90%" stop-color="rgba(244,67,54, 0)" />
-            <stop offset="100%" stop-color="rgba(244,67,54, 0)" />
-          </linearGradient>
-        </svg>
-        <div class="chart" id="kpi-confirmed-chart"></div>
-        <div class="chart-caption" data-i18n="confirmed-chart-caption">Confirmed cases per day</div>
-      </div>
-  
-  
-      <div class="kpi-box" id="kpi-recovered">
-        <div class="label" data-i18n="kpi-recovered">Recovered</div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-          <linearGradient id="kpi-recovered-chart-gradient" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(24,118,211, 0.6)" />
-            <stop offset="90%" stop-color="rgba(24,118,211, 0)" />
-            <stop offset="100%" stop-color="rgba(24,118,211, 0)" />
-          </linearGradient>
-        </svg>
-        <div class="chart" id="kpi-recovered-chart"></div>
-        <div class="chart-caption" data-i18n="recovered-chart-caption">Recoveries per day</div>
-      </div>
 
-      <div class="kpi-box" id="kpi-critical">
-        <div class="label" data-i18n="kpi-critical">Critical</div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-          <linearGradient id="kpi-critical-chart-gradient" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(114,4,5, 0.6)" />
-            <stop offset="90%" stop-color="rgba(114,4,5, 0)" />
-            <stop offset="100%" stop-color="rgba(114,4,5, 0)" />
-          </linearGradient>
-        </svg>
-        <div class="chart" id="kpi-critical-chart"></div>
-        <div class="chart-caption" data-i18n="critical-chart-caption">Critical patients per day</div>
-      </div>
-
-      <div class="kpi-box" id="kpi-deceased">
-        <div class="label" data-i18n="kpi-deceased">Deaths</div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-          <linearGradient id="kpi-deceased-chart-gradient" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(54,72,79, 0.6)" />
-            <stop offset="90%" stop-color="rgba(54,72,79, 0)" />
-            <stop offset="100%" stop-color="rgba(54,72,79, 0)" />
-          </linearGradient>
-        </svg>
-        <div class="chart" id="kpi-deceased-chart"></div>
-        <div class="chart-caption" data-i18n="deceased-chart-caption">Deaths per day</div>
-      </div>
-
-      <div class="kpi-box" id="kpi-active" data-tippy-i18n="kpi-active-tooltip" data-tippy-placement="bottom" >
-        <div class="label"><span data-i18n="kpi-active">Active</span></div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-          <linearGradient id="kpi-active-chart-gradient" x2="0" y2="1">
-            <stop offset="0%" stop-color="rgba(223,14,31, 0.6)" />
-            <stop offset="90%" stop-color="rgba(223,14,31, 0)" />
-            <stop offset="100%" stop-color="rgba(223,14,31, 0)" />
-          </linearGradient>
-        </svg>
-        <div class="chart" id="kpi-active-chart"></div>
-        <div class="chart-caption" data-i18n="active-chart-caption">Active cases per day</div>
-      </div>
-    
-      <div class="kpi-box" id="kpi-tested">
-        <div class="vitals">
-          <div class="label" data-i18n="kpi-tested">Tested</div>
+    <div id="page">
+      <section id="kpi" class="loading">
+        <div class="kpi-box" id="kpi-confirmed">
+          <div class="label" data-i18n="kpi-confirmed">Confirmed</div>
           <div class="value"><div class="lds-dual-ring"></div></div>
           <div class="diff">&nbsp;</div>
-          <div class="description"></div>  
-        </div>
-        <div class="chart-container">
-          <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-            <linearGradient id="kpi-tested-chart-gradient" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(164,173,192, 0.6)" />
-              <stop offset="90%" stop-color="rgba(164,173,192, 0)" />
-              <stop offset="100%" stop-color="rgba(164,173,192, 0)" />
+          <div class="description"></div>
+          <svg
+            style="width: 0; height: 0; position: absolute;"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <linearGradient id="kpi-confirmed-chart-gradient" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(244,67,54, 0.6)" />
+              <stop offset="90%" stop-color="rgba(244,67,54, 0)" />
+              <stop offset="100%" stop-color="rgba(244,67,54, 0)" />
             </linearGradient>
           </svg>
-          <div class="chart" id="kpi-tested-chart"></div>
-          <div class="chart-caption" data-i18n="tested-chart-caption">Tests per day</div>  
-        </div>
-      </div>
-
-      <div class="kpi-box" id="kpi-critical-short">
-        <div class="label" data-i18n="kpi-critical">Critical</div>
-        <div class="value"><div class="lds-dual-ring"></div></div>
-        <div class="diff">&nbsp;</div>
-        <div class="description"></div>
-      </div>
-    </section>
-
-    <section id="national-charts" class="embed-hide">
-      <section id="trend-chart-container" class="embed-hide">
-        <h4 data-i18n="outbreak-spread-trend">Total Cases</h4>
-        <div id="trend-chart-box">
-          <div id="trend-chart">
-              <div class="loader"><div class="lds-dual-ring"></div></div>
+          <div class="chart" id="kpi-confirmed-chart"></div>
+          <div class="chart-caption" data-i18n="confirmed-chart-caption">
+            Confirmed cases per day
           </div>
         </div>
+
+        <div class="kpi-box" id="kpi-recovered">
+          <div class="label" data-i18n="kpi-recovered">Recovered</div>
+          <div class="value"><div class="lds-dual-ring"></div></div>
+          <div class="diff">&nbsp;</div>
+          <div class="description"></div>
+          <svg
+            style="width: 0; height: 0; position: absolute;"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <linearGradient id="kpi-recovered-chart-gradient" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(24,118,211, 0.6)" />
+              <stop offset="90%" stop-color="rgba(24,118,211, 0)" />
+              <stop offset="100%" stop-color="rgba(24,118,211, 0)" />
+            </linearGradient>
+          </svg>
+          <div class="chart" id="kpi-recovered-chart"></div>
+          <div class="chart-caption" data-i18n="recovered-chart-caption">
+            Recoveries per day
+          </div>
+        </div>
+
+        <div class="kpi-box" id="kpi-critical">
+          <div class="label" data-i18n="kpi-critical">Critical</div>
+          <div class="value"><div class="lds-dual-ring"></div></div>
+          <div class="diff">&nbsp;</div>
+          <div class="description"></div>
+          <svg
+            style="width: 0; height: 0; position: absolute;"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <linearGradient id="kpi-critical-chart-gradient" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(114,4,5, 0.6)" />
+              <stop offset="90%" stop-color="rgba(114,4,5, 0)" />
+              <stop offset="100%" stop-color="rgba(114,4,5, 0)" />
+            </linearGradient>
+          </svg>
+          <div class="chart" id="kpi-critical-chart"></div>
+          <div class="chart-caption" data-i18n="critical-chart-caption">
+            Critical patients per day
+          </div>
+        </div>
+
+        <div class="kpi-box" id="kpi-deceased">
+          <div class="label" data-i18n="kpi-deceased">Deaths</div>
+          <div class="value"><div class="lds-dual-ring"></div></div>
+          <div class="diff">&nbsp;</div>
+          <div class="description"></div>
+          <svg
+            style="width: 0; height: 0; position: absolute;"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <linearGradient id="kpi-deceased-chart-gradient" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(54,72,79, 0.6)" />
+              <stop offset="90%" stop-color="rgba(54,72,79, 0)" />
+              <stop offset="100%" stop-color="rgba(54,72,79, 0)" />
+            </linearGradient>
+          </svg>
+          <div class="chart" id="kpi-deceased-chart"></div>
+          <div class="chart-caption" data-i18n="deceased-chart-caption">
+            Deaths per day
+          </div>
+        </div>
+
+        <div
+          class="kpi-box"
+          id="kpi-active"
+          data-tippy-i18n="kpi-active-tooltip"
+          data-tippy-placement="bottom"
+        >
+          <div class="label"><span data-i18n="kpi-active">Active</span></div>
+          <div class="value"><div class="lds-dual-ring"></div></div>
+          <div class="diff">&nbsp;</div>
+          <div class="description"></div>
+          <svg
+            style="width: 0; height: 0; position: absolute;"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <linearGradient id="kpi-active-chart-gradient" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(223,14,31, 0.6)" />
+              <stop offset="90%" stop-color="rgba(223,14,31, 0)" />
+              <stop offset="100%" stop-color="rgba(223,14,31, 0)" />
+            </linearGradient>
+          </svg>
+          <div class="chart" id="kpi-active-chart"></div>
+          <div class="chart-caption" data-i18n="active-chart-caption">
+            Active cases per day
+          </div>
+        </div>
+
+        <div class="kpi-box" id="kpi-tested">
+          <div class="vitals">
+            <div class="label" data-i18n="kpi-tested">Tested</div>
+            <div class="value"><div class="lds-dual-ring"></div></div>
+            <div class="diff">&nbsp;</div>
+            <div class="description"></div>
+          </div>
+          <div class="chart-container">
+            <svg
+              style="width: 0; height: 0; position: absolute;"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <linearGradient id="kpi-tested-chart-gradient" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(164,173,192, 0.6)" />
+                <stop offset="90%" stop-color="rgba(164,173,192, 0)" />
+                <stop offset="100%" stop-color="rgba(164,173,192, 0)" />
+              </linearGradient>
+            </svg>
+            <div class="chart" id="kpi-tested-chart"></div>
+            <div class="chart-caption" data-i18n="tested-chart-caption">
+              Tests per day
+            </div>
+          </div>
+        </div>
+
+        <div class="kpi-box" id="kpi-critical-short">
+          <div class="label" data-i18n="kpi-critical">Critical</div>
+          <div class="value"><div class="lds-dual-ring"></div></div>
+          <div class="diff">&nbsp;</div>
+          <div class="description"></div>
+        </div>
       </section>
-    
-      <section id="daily-increase-container" class="embed-hide">
-        <h4 data-i18n="new-cases-by-day">Daily Confirmed Cases</h4>
-        <div id="daily-increase-chart-box">
-          <div id="daily-increase-chart">
+
+      <section id="national-charts" class="embed-hide">
+        <section id="trend-chart-container" class="embed-hide">
+          <h4 data-i18n="outbreak-spread-trend">Total Cases</h4>
+          <div id="trend-chart-box">
+            <div id="trend-chart">
+              <div class="loader"><div class="lds-dual-ring"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="daily-increase-container" class="embed-hide">
+          <h4 data-i18n="new-cases-by-day">Daily Confirmed Cases</h4>
+          <div id="daily-increase-chart-box">
+            <div id="daily-increase-chart">
+              <div class="loader"><div class="lds-dual-ring"></div></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="prefecture-sections">
+        <section id="prefecture-map-container">
+          <a name="map"
+            ><h4>
+              <span data-i18n="covid-19" class="embed-show">COVID-19</span>
+              <span data-i18n="outbreak-map">Outbreak Map</span>
+            </h4></a
+          >
+          <div id="prefecture-map-contents">
+            <div id="map-container"></div>
+            <p class="embed-show footnote">
+              powered by
+              <a href="https://covid19japan.com" target="_blank"
+                >COVID19Japan.com</a
+              >
+            </p>
+            <div id="map-legend"></div>
+          </div>
+        </section>
+
+        <section id="prefecture-top-table-container" class="embed-hide">
+          <h4 data-i18n="active-regions">Most Active Regions</h4>
+        </section>
+      </section>
+
+      <section id="regional-charts-container" class="embed-hide">
+        <svg
+          style="width: 0; height: 0; position: absolute;"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <linearGradient id="regional-chart-gradient" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(0, 10, 18, 0.6)" />
+            <stop offset="90%" stop-color="rgba(0, 10, 18, 0)" />
+            <stop offset="100%" stop-color="rgba(0, 10, 18, 0)" />
+          </linearGradient>
+        </svg>
+      </section>
+
+      <section id="regional-trajectory-container" class="embed-hide">
+        <h4 data-i18n="confirmed-case-trajectories-by-region">
+          Confirmed Case Trajectories by Region
+        </h4>
+        <div id="regional-trajectory-chart-box">
+          <div id="regional-trajectory">
             <div class="loader"><div class="lds-dual-ring"></div></div>
           </div>
         </div>
       </section>
-    </section>
 
-    <section id="prefecture-sections">
-      <section id="prefecture-map-container">       
-        <a name="map"><h4><span data-i18n="covid-19" class="embed-show">COVID-19</span> <span data-i18n="outbreak-map">Outbreak Map</span></h4></a>
-        <div id="prefecture-map-contents">
-          <div id="map-container"></div>
-          <p class="embed-show footnote">powered by <a href="https://covid19japan.com" target="_blank">COVID19Japan.com</a></p>
-          <div id="map-legend"></div>
-        </div>
-      </section>    
-
-      <section id="prefecture-top-table-container" class="embed-hide">
-        <h4 data-i18n="active-regions">Most Active Regions</h4>
+      <section id="helpful-links" class="embed-hide">
+        <a name="links">
+          <h4 data-i18n="helpful-links">Helpful Links</h4>
+        </a>
+        <ul>
+          <li>
+            <a href="https://mohs.mn/news/t/6">
+              Mongolian Ministry of Health
+            </a>
+          </li>
+          <li>
+            <a href="https://covid19.mohs.mn">
+              Covid 19 information site by Ministry of Health
+            </a>
+          </li>
+        </ul>
       </section>
-    </section>
-    
-  
-    <section id="regional-charts-container" class="embed-hide">
-
-      <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-        <linearGradient id="regional-chart-gradient" x2="0" y2="1">
-          <stop offset="0%" stop-color="rgba(0, 10, 18, 0.6)" />
-          <stop offset="90%" stop-color="rgba(0, 10, 18, 0)" />
-          <stop offset="100%" stop-color="rgba(0, 10, 18, 0)" />
-        </linearGradient>
-      </svg>
-
-    </section>
-
-    <section id="regional-trajectory-container" class="embed-hide">
-      <h4 data-i18n="confirmed-case-trajectories-by-region">Confirmed Case Trajectories by Region</h4>
-      <div id="regional-trajectory-chart-box">
-        <div id="regional-trajectory">
-          <div class="loader"><div class="lds-dual-ring"></div></div>
-        </div>
-      </div>
-    </section>
-  
-    <section id="helpful-links" class="embed-hide">
-      <a name="links">
-        <h4 data-i18n="helpful-links">Helpful Links</h4>
-      </a>
-      <ul>
-        <li>
-          <a href="https://mohs.mn/news/t/6">
-            Mongolian Ministry of Health
-          </a>
-        </li>
-        <li>
-          <a href="https://covid19.mohs.mn">
-            Covid 19 information site by Ministry of Health
-          </a>
-        </li>
-      </ul>
-    </section>
-  </div>
-  <!-- JS -->
-  <script
-    src="https://browser.sentry-cdn.com/5.27.6/bundle.min.js"
-    integrity="sha384-rtZLZkLLKTQnK3HpcN1IG6wMYrx+O3GraPVH74SyT/gzvTfX6O/XLR7Ww65yd1w+"
-    crossorigin="anonymous"
+    </div>
+    <!-- JS -->
+    <script
+      src="https://browser.sentry-cdn.com/5.27.6/bundle.min.js"
+      integrity="sha384-rtZLZkLLKTQnK3HpcN1IG6wMYrx+O3GraPVH74SyT/gzvTfX6O/XLR7Ww65yd1w+"
+      crossorigin="anonymous"
     ></script>
-  <script src="https://browser.sentry-cdn.com/5.27.6/captureconsole.min.js"></script>
-  <script>
-    if (window.location.hostname == 'covid19mn.netlify.app') {
-      Sentry.init({
-        dsn: 'https://bfc7be47074140f6a549f727fe487320@o481524.ingest.sentry.io/5530345',
-        debug: false,
-        blacklistUrls: [
-          // Chrome extensions
-          /extensions\//i,
-          /^chrome:\/\//i,
-        ],
-              ignoreErrors: [
-          // Ignore Google Translate Chrome extension errors.
-          // See: https://medium.com/@amir.harel/a-b-target-classname-indexof-is-not-a-function-at-least-not-mine-8e52f7be64ca
-          "a[b].target.className.indexOf is not a function",
-        ],
-        integrations: [
-          new Sentry.Integrations.CaptureConsole({
-            levels: ['error']
-          })
-        ]
-      })
-    }
-  </script>  
-  <script async src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PSSYC29G00"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script src="https://browser.sentry-cdn.com/5.27.6/captureconsole.min.js"></script>
+    <script>
+      if (window.location.hostname == "covid19mn.netlify.app") {
+        Sentry.init({
+          dsn:
+            "https://bfc7be47074140f6a549f727fe487320@o481524.ingest.sentry.io/5530345",
+          debug: false,
+          blacklistUrls: [
+            // Chrome extensions
+            /extensions\//i,
+            /^chrome:\/\//i,
+          ],
+          ignoreErrors: [
+            // Ignore Google Translate Chrome extension errors.
+            // See: https://medium.com/@amir.harel/a-b-target-classname-indexof-is-not-a-function-at-least-not-mine-8e52f7be64ca
+            "a[b].target.className.indexOf is not a function",
+          ],
+          integrations: [
+            new Sentry.Integrations.CaptureConsole({
+              levels: ["error"],
+            }),
+          ],
+        });
+      }
+    </script>
+    <script
+      async
+      src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"
+    ></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PSSYC29G00"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-PSSYC29G00');
-  </script>
-
-</body>
+      gtag("config", "G-PSSYC29G00");
+    </script>
+  </body>
 </html>

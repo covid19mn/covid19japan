@@ -5,6 +5,7 @@
 @import 'src/type';
 @import 'src/layout';
 @import 'src/loader';
+@import 'src/custom';
 
 // Use border-box override for more simple box-sizing.
 * {
@@ -13,7 +14,7 @@
 
 body {
   margin: 0px;
-  font-family: 'Open Sans', helvetica, sans-serif;
+  font-family: 'Inter', helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4rem;
   color: $primary-black;
@@ -24,7 +25,7 @@ body[data-direction=rtl] #page {
   direction: rtl;
 }
 
-#page, footer  {
+#page, footer, .container  {
   max-width: $breakpoint-1200-page-width;
   margin: 0 auto;
 }
@@ -81,7 +82,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
 
     .lang-picker-title {
       font-style: italic;
@@ -99,27 +100,17 @@ header {
       padding-inline-start: 0;
 
       a {
+        padding: 8px 16px;
         white-space: nowrap;
         text-decoration: none;
         margin-block-end: 0.3rem;
 
         &.active {
-          border-bottom: solid 2px black;
-          font-weight: $font-weight-bold;
+          background: #F1F1F1;
+          border-radius: 8px;
         }
       }
     }
-
-    #last-updated {
-      padding-block-start: 0.5em;
-      padding-inline-end: 0;
-      padding-block-end: 0.5em;
-      padding-inline-start: 1em;
-      flex-grow: 1;
-      font-style: italic;
-      text-align: end;
-    }
-
   }
 }
 

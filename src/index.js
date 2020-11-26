@@ -202,8 +202,6 @@ const populateLanguageSelector = () => {
     parent.innerHTML =
       parent.innerHTML +
       `<a href="#" class="lang-picker-button" data-lang-picker='${LANGUAGES[i]}'>${LANGUAGE_NAMES[i]}</a> `;
-    if (i <= LANGUAGES.length - 2)
-      parent.innerHTML = parent.innerHTML + `&nbsp;| `;
   }
 };
 
