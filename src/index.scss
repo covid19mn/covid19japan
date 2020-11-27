@@ -252,7 +252,7 @@ a, a:hover, a:visited {
 }
 
 
-#footer-container {
+footer {
   background: white;
   margin: 0;
 
@@ -263,6 +263,35 @@ a, a:hover, a:visited {
   }
 
 }
+
+@media (max-width: $breakpoint-960) {
+  footer {
+    background-color: red;
+
+    .links-wrapper {
+      flex-direction: column;
+    }
+
+    #helpful-links {
+      align-self: flex-start;
+      text-align: left;
+
+      ul {
+        padding-left: 0;
+      }
+    }
+
+    .credits-wrapper {
+      flex-direction: column;
+    }
+
+    .last-updated {
+      align-self: flex-start;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
 
 // footer {
 //   margin: 0 auto;
