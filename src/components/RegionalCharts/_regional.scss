@@ -4,7 +4,7 @@
 @import 'src/layout';
 
 
-$box-margin: 5px;
+$box-margin: 0px;
 
 
 $breakpoint-1200-box-width: ($breakpoint-1200-page-width - $box-margin * 2 * 5) / 5;
@@ -40,7 +40,7 @@ $breakpoint-600-full-box-width: $breakpoint-600-page-width - $box-margin * 2;
 // Layout 1:  Max screen size >1200px 
 
 .region-area {
-  height: 14rem;
+  height: 15rem;
   width: $breakpoint-1200-full-box-width;
   display: flex;
   flex-direction: row;
@@ -217,6 +217,7 @@ a.region-top-link {
   background: $color-box-background;
   box-shadow: $color-box-shadow;
   border-radius: $box-border-radius;
+  border: 1px solid #e6e6e6;
   margin: 0.5rem 0;
   padding: 0.8rem;
 

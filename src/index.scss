@@ -95,7 +95,6 @@ header {
     
     .lang-picker {
       padding-block-start: 0.5em;
-      padding-inline-end: 1em;
       padding-block-end: 0.5em;
       padding-inline-start: 0;
 
@@ -219,16 +218,6 @@ a, a:hover, a:visited {
   padding-inline-end: 10px;
   padding-block-end: 5px;
   padding-inline-start: 10px;
-  border-radius: $box-border-radius;
-  background: $color-box-background;
-  box-shadow: $color-box-shadow;
-}
-
-#prefecture-map-contents {
-  width: 100%;
-  border-radius: $box-border-radius;
-  background: $color-box-background;
-  box-shadow: $color-box-shadow;
 }
 
 
@@ -263,7 +252,7 @@ a, a:hover, a:visited {
 }
 
 
-#footer-container {
+footer {
   background: white;
   margin: 0;
 
@@ -274,6 +263,35 @@ a, a:hover, a:visited {
   }
 
 }
+
+@media (max-width: $breakpoint-960) {
+  footer {
+    background-color: red;
+
+    .links-wrapper {
+      flex-direction: column;
+    }
+
+    #helpful-links {
+      align-self: flex-start;
+      text-align: left;
+
+      ul {
+        padding-left: 0;
+      }
+    }
+
+    .credits-wrapper {
+      flex-direction: column;
+    }
+
+    .last-updated {
+      align-self: flex-start;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
 
 // footer {
 //   margin: 0 auto;
