@@ -54,7 +54,7 @@
   "tested-percentage": "{{percent}}% of results are positive.",
   "active-cases": "Active cases",
   "no-active-cases": "No active cases",
-  "data-source-in-progress": "Data sourcing in the progress. Data set is not up to date.",
+  "data-source-in-progress": "Data sourcing is in progress. The data set is not up to date.",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",
