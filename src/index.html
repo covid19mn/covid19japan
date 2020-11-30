@@ -94,8 +94,29 @@
     />
   </head>
   <body class="<%= htmlWebpackPlugin.options.bodyClass %>">
-    <header class="bg-white embed-hide b-bottom">
+    <div class="b-bottom bg-white">
       <div class="container">
+        <div class="in-progress">
+          <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                                                           viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+            <path d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+            <animateTransform 
+                              attributeName="transform" 
+                              attributeType="XML" 
+                              type="rotate"
+                              dur="1s"
+                              from="0 50 50"
+                              to="360 50 50" 
+                              repeatCount="indefinite" />
+            </path>
+          </svg>
+          <span data-i18n="data-source-in-progress">Data sourcing in the progress. Data set is not up to date.</span>
+        </div>
+      </div>
+    </div>
+    <header class="bg-white embed-hide border">
+      <div class="container">
+
         <div class="my-5">
           <div class="toolbar">
             <div>
@@ -337,7 +358,7 @@
       </section>
     </div>
 
-    <footer class="bg-white embed-hide b-bottom mt-5">
+    <footer class="bg-white embed-hide border mt-5">
       <div class="container">
         <div>
           <div class="links-wrapper">
