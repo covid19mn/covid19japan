@@ -61,7 +61,7 @@
     "nagasaki-cruise": "Nagasaki Cruise Ship"
   },
   "prefectures": {
-    "Sukhbaatar": "Sukhbaatar",
+    "Suhbaatar": "Sukhbaatar",
     "Chingeltei": "Chingeltei",
     "Songinokhairkhan": "Songinokhairkhan",
     "Bayangol": "Bayangol",
@@ -77,7 +77,8 @@
     "Imported": "Imported",
     "HUSUT": "Health care workers",
     "Enhsaran": "Quarantined",
-    "Battsengel": "Battsengel"
+    "Battsengel": "Battsengel",
+    "Sukhbaatar": "Sukhbaatar"
   },
   "regions": {
     "Ulaanbaatar": "Ulaanbaatar",
