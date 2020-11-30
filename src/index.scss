@@ -233,6 +233,7 @@ a, a:hover, a:visited {
 #helpful-links {
   align-self: flex-end;
   text-align: right;
+  flex-grow: 1;
 
   ul {
     list-style: none;
@@ -264,6 +265,10 @@ footer {
 
 }
 
+.built-by-wrapper {
+  flex-basis: 600px;
+}
+
 @media (max-width: $breakpoint-960) {
   footer {
     background-color: red;
@@ -279,6 +284,10 @@ footer {
       ul {
         padding-left: 0;
       }
+    }
+
+    .built-by-wrapper {
+      flex-basis: auto;
     }
 
     .credits-wrapper {

@@ -91,5 +91,6 @@
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
-  }
+  },
+  "built-by": "This site is built by \"AND Global\" team members as part of our social responsibility efforts. The implementation is based on open source project referenced below. "
 }
