@@ -74,7 +74,10 @@
     "Darkhan": "Darkhan",
     "Choir": "Choir",
     "Erdenet": "Erdenet",
-    "Imported": "Imported"
+    "Imported": "Imported",
+    "HUSUT": "Health care workers",
+    "Enhsaran": "Quarantined",
+    "Battsengel": "Battsengel"
   },
   "regions": {
     "Ulaanbaatar": "Ulaanbaatar",
@@ -83,6 +86,7 @@
     "Darkhan-Uul": "Darkhan",
     "Govisumber": "Govisumber",
     "Orkhon": "Orkhon",
+    "Arkhangai": "Arkhangai",
     "Other": "Other"
   },
   "countries": {

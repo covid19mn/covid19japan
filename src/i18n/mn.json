@@ -75,7 +75,10 @@
     "Darkhan": "Дархан",
     "Choir": "Чойр",
     "Erdenet": "Эрдэнэт",
-    "Imported": "Зөөвөрлөгдсөн"
+    "Imported": "Зөөвөрлөгдсөн",
+    "HUSUT": "Эрүүл мэндийн ажилчид",
+    "Enhsaran": "Тусгаарлалтад",
+    "Battsengel": "Батцэнгэл"
   },
   "regions": {
     "Ulaanbaatar": "Улаанбаатар",
@@ -84,6 +87,7 @@
     "Darkhan-Uul": "Дархан-Уул",
     "Govisumber": "Говьсүмбэр",
     "Orkhon": "Орхон",
+    "Arkhangai": "Архангай",
     "Other": "Бусад"
   },
   "countries": {
