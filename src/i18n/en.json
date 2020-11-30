@@ -3,7 +3,7 @@
   "languages": "Languages:",
   "last-updated": "Last Updated:",
   "kpi-active": "Active",
-  "kpi-active-tooltip": "Confirmed cases minus recovered minus deceased",
+  "kpi-active-tooltip": "Confirmed cases minus recovered minus deceased minus foreign citizen cases",
   "kpi-critical": "Critical",
   "kpi-deceased": "Deaths",
   "kpi-tested": "Tested",
