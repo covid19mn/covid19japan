@@ -55,7 +55,7 @@
   "tested-percentage": "{{percent}}% эерэг.",
   "active-cases": "Идэвхитэй тохиолдлууд",
   "no-active-cases": "Идэвхитэй тохиолдол байхгүй.",
-  "data-source-in-progress": "Мэдээлэл шинэчлэгдэж дуусаагүй байна.",
+  "data-source-in-progress": "Мэдээлэл нэгтгэх явц дуусаагүй байна.",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",
