@@ -15,7 +15,13 @@ let pageDrawCount = 0;
  * @param {*} pageDraws - number of redraws to screen
  */
 const drawMapPrefectures = (ddb, map, lang) => {
-  const formatNumber = maybeIntlNumberFormat(lang);
+  const formatNumber = (num) => {
+    if (num === undefined) {
+      return 0;
+    }
+
+    return maybeIntlNumberFormat(lang)(num);
+  };
 
   // Find the index of the first symbol layer
   // in the map style so we can draw the
@@ -149,7 +155,7 @@ const drawMapPrefectures = (ddb, map, lang) => {
       layers: ["prefecture-layer"],
     })[0];
     if (feature) {
-      const matchingPrefectures = ddb.prefectures.filter((p) => {
+      const matchingPrefectures = ddb.regions.filter((p) => {
         return p.name === feature.properties.name;
       });
 
@@ -168,10 +174,10 @@ const drawMapPrefectures = (ddb, map, lang) => {
         popupIncrementSpan = `<span class='popup-increment'>(+${increment})</span>`;
       }
 
-      const prefectureStringId = `prefectures.${thisPrefecture.name}`;
+      const prefectureStringId = `regions.${thisPrefecture.name}`;
       const prefectureName = i18next.t(prefectureStringId);
       const confirmed = formatNumber(thisPrefecture.confirmed);
-      const deaths = formatNumber(thisPrefecture.deaths);
+      const deaths = formatNumber(thisPrefecture.deaths) || 0;
       const recovered = formatNumber(thisPrefecture.recovered);
       const active = formatNumber(thisPrefecture.active);
       const deathsLabel = i18next.t("deaths");
@@ -187,6 +193,7 @@ const drawMapPrefectures = (ddb, map, lang) => {
           <div><span data-i18n="recovered">${recoveredLabel}</span>: ${recovered}</div>
           <div><span data-i18n="deaths">${deathsLabel}</span>: ${deaths}</div>
         </div>`;
+
       popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
     } else {
       popup.remove();
