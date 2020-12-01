@@ -16,7 +16,7 @@ const drawTrajectoryChart = (
   type
 ) => {
   const formatNumber = maybeIntlNumberFormat(lang);
-  const minimumConfirmed = 1;
+  const minimumConfirmed = 20;
   const filteredAreas = areas.filter((area) => {
     return area.confirmed >= minimumConfirmed;
   });
@@ -36,6 +36,7 @@ const drawTrajectoryChart = (
     const cumulativeConfirmedFromMinimum = cumulativeConfirmed.filter(
       (value) => value >= minimumConfirmed
     );
+    console.log(cumulativeConfirmedFromMinimum);
     const translatedName =
       i18next.getResource(lang, "translation", `${type}.${area.name}`) ||
       area.name;
