@@ -27,7 +27,7 @@
   "active": "Идэвхитэй",
   "helpful-links": "Хэрэгтэй Холбоосууд",
   "primary-data-sources": "Мэдээллийн эх сурвалж",
-  "confirmed-case-trajectories-by-region": "Батлагдсан тохиолдлын өөрчлөлт, аймгаар",
+  "confirmed-case-trajectories-by-region": "Дотоодын батлагдсан тохиолдлын өсөлт",
   "trajectory-description": "{{minimumConfirmed}} тохиолдол гарснаас хойших өдрийн тоо",
   "traveling-into-japan": "Traveling into Japan",
   "about-travel-restriction": "Below are the travel restrictions that have been put in place regarding traveling into Japan. Click on the link for more details on the restrictions.",
