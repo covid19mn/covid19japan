@@ -7,7 +7,7 @@ import {
   LEGEND_CLASSES,
 } from "../../data/constants";
 
-const PREFECTURE_JSON_PATH = "static/prefectures-smooth.geojson";
+const PREFECTURE_JSON_PATH = "static/prefectures-smooth.geojson?v=1586005473";
 let pageDrawCount = 0;
 
 /**
