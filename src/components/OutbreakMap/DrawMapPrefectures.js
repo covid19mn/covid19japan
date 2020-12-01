@@ -155,12 +155,6 @@ const drawMapPrefectures = (ddb, map, lang) => {
       layers: ["prefecture-layer"],
     })[0];
     if (feature) {
-      console.log("----------------------------");
-      console.log(ddb.regions);
-      console.log("----------------------------");
-      console.log("----------------------------");
-      console.log(feature.properties);
-      console.log("----------------------------");
       const matchingPrefectures = ddb.regions.filter((p) => {
         return p.name === feature.properties.name;
       });
