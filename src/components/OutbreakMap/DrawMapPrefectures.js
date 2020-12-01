@@ -7,7 +7,7 @@ import {
   LEGEND_CLASSES,
 } from "../../data/constants";
 
-const PREFECTURE_JSON_PATH = "static/prefectures-smooth.geojson";
+const PREFECTURE_JSON_PATH = "static/prefectures-smooth.geojson?v=1586005473";
 let pageDrawCount = 0;
 
 /**
@@ -159,11 +159,20 @@ const drawMapPrefectures = (ddb, map, lang) => {
         return p.name === feature.properties.name;
       });
 
+      let thisPrefecture;
+
       if (!matchingPrefectures || matchingPrefectures.length < 1) {
-        return;
+        thisPrefecture = {
+          name: feature.properties.name,
+          confirmed: 0,
+          deaths: 0,
+          recovered: 0,
+          active: 0,
+        };
+      } else {
+        thisPrefecture = matchingPrefectures[0];
       }
 
-      const thisPrefecture = matchingPrefectures[0];
       if (typeof thisPrefecture === "undefined") {
         return; // This happens if prefecture doesn't have any stats (e.g. Iwate)
       }
