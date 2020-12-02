@@ -240,7 +240,7 @@ const initChartTimePeriodSelector = () => {
       e.preventDefault();
       document.querySelector("#time-period-all-time").classList.add("selected");
       document
-        .querySelector("#time-period-three-months")
+        .querySelector("#time-period-recent")
         .classList.remove("selected");
       CHART_TIME_PERIOD = TIME_PERIOD_ALL_TIME;
       const event = new CustomEvent("covid19japan-redraw");
@@ -248,14 +248,14 @@ const initChartTimePeriodSelector = () => {
     });
 
   document
-    .querySelector("#time-period-three-months")
+    .querySelector("#time-period-recent")
     .addEventListener("click", (e) => {
       e.preventDefault();
       document
         .querySelector("#time-period-all-time")
         .classList.remove("selected");
       document
-        .querySelector("#time-period-three-months")
+        .querySelector("#time-period-recent")
         .classList.add("selected");
       CHART_TIME_PERIOD = TIME_PERIOD_THREE_MONTHS;
       const event = new CustomEvent("covid19japan-redraw");
