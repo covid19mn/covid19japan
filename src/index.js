@@ -94,7 +94,7 @@ const loadData = (callback) => {
 
   const tryFetch = (retryFn) => {
     // Load the json data file
-    fetch(JSON_PATH)
+    fetch(JSON_PATH, {cache: "no-store"})
       .then((res) => res.json())
       .catch((networkError) => {
         retryFn(delay, networkError);
