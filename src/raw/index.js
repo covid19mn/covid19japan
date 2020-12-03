@@ -408,14 +408,15 @@ document.addEventListener("covid19japan-redraw", () => {
   callIfUpdated(() => whenMapAndDataReady());
 });
 
-if (window.location.href.indexOf("nomap") != -1) {
-  PAGE_STATE.mapShouldLoad = false;
-}
-initMap();
-loadDataOnPage();
-initDataTranslate();
-initChartTimePeriodSelector();
-setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
-startReloadTimer();
-
-sendResizeMessage();
+document.addEventListener("raw_loaded", () => {
+  if (window.location.href.indexOf("nomap") != -1) {
+    PAGE_STATE.mapShouldLoad = false;
+  }
+  initMap();
+  loadDataOnPage();
+  initDataTranslate();
+  initChartTimePeriodSelector();
+  setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
+  startReloadTimer();
+  sendResizeMessage();
+});

@@ -213,6 +213,12 @@
         </div>
       </section>
 
+      <section class="chart-control embed-hide">
+        <span data-i18n="time-period" class="time-period-caption">Time Period</span>: 
+        <a data-i18n="all-time" id="time-period-all-time" class="time-period selected">All Time</a> |
+        <a data-i18n="three-months" id="time-period-three-months" class="time-period">3 Months</a>
+      </section>
+
       <section id="national-charts" class="embed-hide">
         <section id="trend-chart-container" class="embed-hide">
           <div id="trend-chart-box">
@@ -342,8 +348,8 @@
         </div>
       </div>
     </footer>
-  </div></template
->
+  </div>
+</template>
 
 <script>
 export default {
@@ -352,6 +358,8 @@ export default {
   },
   mounted() {
     require("~/raw/index.js");
+    let event = new CustomEvent("raw_loaded", { });
+    document.dispatchEvent(event);
   }
 };
 </script>

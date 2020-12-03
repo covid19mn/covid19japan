@@ -14,9 +14,6 @@ export default {
   },
   components: {
     Raw
-  },
-  mounted() {
-    require("~/raw/index.js")
   }
 }
 </script>
