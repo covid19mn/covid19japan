@@ -37,5 +37,30 @@ module.exports = {
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
-  }
+  },
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'G-PSSYC29G00'
+      }
+    },
+    {
+      use: 'gridsome-plugin-sentry',
+      options: {
+        dsn: 'https://bfc7be47074140f6a549f727fe487320@o481524.ingest.sentry.io/5530345',
+        blacklistUrls: [
+          // Chrome extensions
+          /extensions\//i,
+          /^chrome:\/\//i,
+        ],
+        debug: false,
+        ignoreErrors: [
+          // Ignore Google Translate Chrome extension errors.
+          // See: https://medium.com/@amir.harel/a-b-target-classname-indexof-is-not-a-function-at-least-not-mine-8e52f7be64ca
+          "a[b].target.className.indexOf is not a function",
+        ]
+      }
+    }
+  ]
 }
