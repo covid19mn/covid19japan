@@ -25,6 +25,7 @@ module.exports = {
   siteName: "covid19mongolia",
   siteUrl: "https://covid19mongolia.mn",
   pathPrefix: "/",
+  outputDir: "/docs",
   chainWebpack (config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
