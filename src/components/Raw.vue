@@ -379,45 +379,32 @@ export default {
 
 body {
   margin: 0px;
-  font-family: "Inter", helvetica, sans-serif;
+  font-family: 'Inter', helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4rem;
   color: $primary-black;
   background: $color-background;
 }
 
-body[data-direction="rtl"] #page {
+body[data-direction=rtl] #page {
   direction: rtl;
 }
 
-#page,
-.container {
+#page, .container  {
   max-width: $breakpoint-1200-page-width;
   margin: 0 auto;
 }
 @media (min-width: $breakpoint-960) and (max-width: $breakpoint-1200-less-than) {
-  #page,
-  .container {
-    max-width: $breakpoint-960-page-width;
-  }
+  #page, .container { max-width: $breakpoint-960-page-width; }
 }
 @media (min-width: $breakpoint-600) and (max-width: $breakpoint-960-less-than) {
-  #page,
-  .container {
-    max-width: $breakpoint-600-page-width;
-  }
+  #page, .container { max-width: $breakpoint-600-page-width; }
 }
 @media (min-width: $breakpoint-500) and (max-width: $breakpoint-600-less-than) {
-  #page,
-  .container {
-    max-width: $breakpoint-500-page-width;
-  }
+  #page, .container { max-width: $breakpoint-500-page-width; }
 }
 @media (max-width: $breakpoint-500) {
-  #page,
-  .container {
-    max-width: 90%;
-  }
+  #page, .container { max-width: 90%;  }
 }
 
 // Title styles
@@ -431,6 +418,7 @@ h1 {
 h4 {
   font-size: 1.4rem;
   line-height: 1.2em;
+  margin-block-start: 0.5rem;
   margin-block-end: 1rem;
   font-weight: $font-weight-bold;
 }
@@ -452,6 +440,7 @@ h5 {
   margin-inline-start: 10px;
 }
 
+
 header {
   padding: 10px 0;
 
@@ -469,7 +458,7 @@ header {
     .lang-picker-button {
       word-wrap: none;
     }
-
+    
     .lang-picker {
       padding-block-start: 0.5em;
       padding-block-end: 0.5em;
@@ -482,7 +471,7 @@ header {
         margin-block-end: 0.3rem;
 
         &.active {
-          background: #f1f1f1;
+          background: #F1F1F1;
           border-radius: 8px;
         }
       }
@@ -490,9 +479,7 @@ header {
   }
 }
 
-a,
-a:hover,
-a:visited {
+a, a:hover, a:visited {
   color: #000a12;
 }
 
@@ -500,10 +487,34 @@ a:visited {
   text-align: center;
 }
 
+// KPI Numbers.
+@import 'src/components/Kpi/kpi';
+
 // National charts
-#national-charts {
-  width: 100%;
+#national-charts { width: 100%; }
+
+.chart-control {
+  font-size: 0.8rem;
+
+  margin: 10px;
+  padding-block-start: 0.5em;
+  padding-block-end: 0.5em;
+
+  .time-period-caption {
+    font-weight: bold;    
+  }
+
+
+  a {
+    text-decoration: underline;
+  }
+  a.selected {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
 }
+
 
 @media (min-width: $breakpoint-960) {
   #national-charts {
@@ -512,25 +523,23 @@ a:visited {
     flex-wrap: nowrap;
     //align-items: stretch;
   }
-  #trend-chart-container {
+  #trend-chart-container { 
     margin-right: 0.75rem;
     flex: 1;
     width: 50%;
   }
-  #daily-increase-container {
+  #daily-increase-container { 
     margin-left: 0.75rem;
     flex: 1;
     width: 50%;
   }
 }
 
-#daily-increase-chart,
-#trend-chart {
+#daily-increase-chart, #trend-chart {
   min-height: 320px;
 }
 
-#daily-increase-chart-box,
-#trend-chart-box {
+#daily-increase-chart-box, #trend-chart-box {
   padding-block-start: 20px;
   padding-inline-end: 10px;
   padding-block-end: 5px;
@@ -541,24 +550,27 @@ a:visited {
   box-shadow: $color-box-shadow;
 }
 
+// Regional section
+@import 'src/components/RegionalCharts/regional';
+
+
 // Prefectural section
 
 #prefecture-sections {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
-  #prefecture-map-container {
+  #prefecture-map-container { 
     margin-right: 10px;
   }
 
-  #prefecture-top-table-container {
+  #prefecture-top-table-container { 
     margin-left: 10px;
   }
 
-  #prefecture-map-container,
-  #prefecture-top-table-container {
+  #prefecture-map-container, #prefecture-top-table-container {
     flex: 1;
     border: $color-box-border;
     box-shadow: $color-box-shadow;
@@ -573,9 +585,7 @@ a:visited {
 }
 
 // National charts
-#trajectories {
-  width: 100%;
-}
+#trajectories { width: 100%; }
 
 #regional-trajectory-container {
   padding-block-start: 20px;
@@ -599,10 +609,15 @@ a:visited {
   padding-inline-start: 10px;
 }
 
+
 #all-prefectures-table-container {
   max-width: 800px;
   margin: 0 auto;
 }
+
+
+@import 'src/components/OutbreakMap/map';
+@import 'src/components/PrefectureTable/prefectureTable';
 
 #helpful-links {
   align-self: flex-end;
@@ -626,6 +641,7 @@ a:visited {
   }
 }
 
+
 footer {
   background: white;
   margin: 0;
@@ -635,6 +651,7 @@ footer {
     text-align: right;
     flex-grow: 1;
   }
+
 }
 
 .built-by-wrapper {
@@ -672,6 +689,7 @@ footer {
     }
   }
 }
+
 
 // footer {
 //   margin: 0 auto;
@@ -714,7 +732,8 @@ body {
     background: $color-embed-background;
 
     #prefecture-map-contents,
-    #kpi .kpi-box {
+    #kpi .kpi-box
+     {
       box-shadow: none;
       border: $color-box-border;
     }
@@ -731,9 +750,9 @@ img.emoji {
   height: 1em;
   width: 1em;
   margin-block-start: 0;
-  margin-inline-end: 0.1em;
+  margin-inline-end: .1em;
   margin-block-end: 0;
-  margin-inline-start: 0.1em;
+  margin-inline-start: .1em;
   vertical-align: -0.1em;
 }
 
@@ -744,8 +763,7 @@ img.emoji {
   path.c3-line {
     stroke-width: 2px;
   }
-  line.c3-xgrid,
-  line.c3-ygrid {
+  line.c3-xgrid, line.c3-ygrid {
     stroke-dasharray: 0 0;
     stroke: #f0f0f0 !important;
   }

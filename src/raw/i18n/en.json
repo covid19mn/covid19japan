@@ -55,6 +55,9 @@
   "active-cases": "Active cases",
   "no-active-cases": "No active cases",
   "data-source-in-progress": "Data sourcing is in progress. The data set is not up to date.",
+  "time-period": "Time period",
+  "all-time": "All time",
+  "last-month": "Last month",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",

@@ -51,9 +51,10 @@ import {
   JSON_PATH,
   SUPPORTED_LANGS,
   DDB_COMMON,
-  DEFAULT_CHART_TIME_PERIOD,
+  TIME_PERIOD_ALL_TIME,
+  TIME_PERIOD_THREE_MONTHS,
 } from "./data/constants";
-import travelRestrictions from "./data/travelRestrictions.json"; // refer to the keys under "countries" in the i18n files for names
+import travelRestrictions from "./data/travelRestrictions"; // refer to the keys under "countries" in the i18n files for names
 import { LANGUAGES, LANGUAGE_NAMES } from "./i18n";
 
 //
@@ -61,7 +62,7 @@ import { LANGUAGES, LANGUAGE_NAMES } from "./i18n";
 //
 
 let LANG = "en";
-let CHART_TIME_PERIOD = DEFAULT_CHART_TIME_PERIOD;
+let CHART_TIME_PERIOD = TIME_PERIOD_ALL_TIME;
 
 const PAGE_STATE = {
   map: null,
@@ -93,7 +94,7 @@ const loadData = (callback) => {
 
   const tryFetch = (retryFn) => {
     // Load the json data file
-    fetch(JSON_PATH, {cache: "no-store"})
+    fetch(JSON_PATH)
       .then((res) => res.json())
       .catch((networkError) => {
         retryFn(delay, networkError);
@@ -230,6 +231,36 @@ const initDataTranslate = () => {
       });
     });
   }
+};
+
+const initChartTimePeriodSelector = () => {
+  document
+    .querySelector("#time-period-all-time")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      document.querySelector("#time-period-all-time").classList.add("selected");
+      document
+        .querySelector("#time-period-three-months")
+        .classList.remove("selected");
+      CHART_TIME_PERIOD = TIME_PERIOD_ALL_TIME;
+      const event = new CustomEvent("covid19japan-redraw");
+      document.dispatchEvent(event);
+    });
+
+  document
+    .querySelector("#time-period-three-months")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      document
+        .querySelector("#time-period-all-time")
+        .classList.remove("selected");
+      document
+        .querySelector("#time-period-three-months")
+        .classList.add("selected");
+      CHART_TIME_PERIOD = TIME_PERIOD_THREE_MONTHS;
+      const event = new CustomEvent("covid19japan-redraw");
+      document.dispatchEvent(event);
+    });
 };
 
 const whenMapAndDataReady = () => {
@@ -377,12 +408,18 @@ document.addEventListener("covid19japan-redraw", () => {
   callIfUpdated(() => whenMapAndDataReady());
 });
 
-if (window.location.href.indexOf("nomap") != -1) {
-  PAGE_STATE.mapShouldLoad = false;
-}
-initMap();
-loadDataOnPage();
-initDataTranslate();
-setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
-startReloadTimer();
-sendResizeMessage();
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.href.indexOf("nomap") != -1) {
+    PAGE_STATE.mapShouldLoad = false;
+  }
+  initMap();
+  loadDataOnPage();
+  initDataTranslate();
+  initChartTimePeriodSelector();
+  setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
+  startReloadTimer();
+});
+
+window.addEventListener("load", () => {
+  sendResizeMessage();
+});

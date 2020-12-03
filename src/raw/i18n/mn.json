@@ -55,6 +55,9 @@
   "active-cases": "Идэвхтэй тохиолдлууд",
   "no-active-cases": "Идэвхтэй тохиолдол байхгүй.",
   "data-source-in-progress": "Мэдээлэл нэгтгэх явц дуусаагүй байна.",
+  "time-period": "Хугацаа",
+  "all-time": "Бүх цаг",
+  "last-month": "Сүүлийн сар",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",
