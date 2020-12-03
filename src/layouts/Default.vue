@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div class="layout" style="z-index:1000">
     <slot/>
   </div>
 </template>
@@ -12,5 +12,9 @@ query {
 }
 </static-query>
 
-<style>
+<style lang="scss" scoped>
+.layout {
+  // this hack prevents unstyled content flickering
+  z-index: -10 !important;
+}
 </style>

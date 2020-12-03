@@ -14,7 +14,7 @@
     "custom-event-polyfill": "^1.0.7",
     "d3": "^5.15.0",
     "date-fns": "^2.11.1",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.23",
     "gridsome-plugin-sentry": "^1.1.0",
     "i18n-iso-countries": "^5.5.0",
     "i18next": "^19.3.4",
