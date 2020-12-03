@@ -418,7 +418,6 @@ h1 {
 h4 {
   font-size: 1.4rem;
   line-height: 1.2em;
-  margin-block-start: 0.5rem;
   margin-block-end: 1rem;
   font-weight: $font-weight-bold;
 }
@@ -487,9 +486,6 @@ a, a:hover, a:visited {
   text-align: center;
 }
 
-// KPI Numbers.
-@import 'src/components/Kpi/kpi';
-
 // National charts
 #national-charts { width: 100%; }
 
@@ -501,14 +497,16 @@ a, a:hover, a:visited {
   padding-block-end: 0.5em;
 
   .time-period-caption {
-    font-weight: bold;    
+    font-weight: bold;
   }
 
 
   a {
+    cursor: pointer;
     text-decoration: underline;
   }
   a.selected {
+    cursor: default;
     font-weight: bold;
     text-decoration: none;
   }
@@ -549,10 +547,6 @@ a, a:hover, a:visited {
   background: $color-box-background;
   box-shadow: $color-box-shadow;
 }
-
-// Regional section
-@import 'src/components/RegionalCharts/regional';
-
 
 // Prefectural section
 
@@ -614,10 +608,6 @@ a, a:hover, a:visited {
   max-width: 800px;
   margin: 0 auto;
 }
-
-
-@import 'src/components/OutbreakMap/map';
-@import 'src/components/PrefectureTable/prefectureTable';
 
 #helpful-links {
   align-self: flex-end;

@@ -54,7 +54,7 @@ import {
   TIME_PERIOD_ALL_TIME,
   TIME_PERIOD_THREE_MONTHS,
 } from "./data/constants";
-import travelRestrictions from "./data/travelRestrictions"; // refer to the keys under "countries" in the i18n files for names
+import travelRestrictions from "./data/travelRestrictions.json"; // refer to the keys under "countries" in the i18n files for names
 import { LANGUAGES, LANGUAGE_NAMES } from "./i18n";
 
 //
@@ -408,18 +408,14 @@ document.addEventListener("covid19japan-redraw", () => {
   callIfUpdated(() => whenMapAndDataReady());
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.href.indexOf("nomap") != -1) {
-    PAGE_STATE.mapShouldLoad = false;
-  }
-  initMap();
-  loadDataOnPage();
-  initDataTranslate();
-  initChartTimePeriodSelector();
-  setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
-  startReloadTimer();
-});
+if (window.location.href.indexOf("nomap") != -1) {
+  PAGE_STATE.mapShouldLoad = false;
+}
+initMap();
+loadDataOnPage();
+initDataTranslate();
+initChartTimePeriodSelector();
+setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
+startReloadTimer();
 
-window.addEventListener("load", () => {
-  sendResizeMessage();
-});
+sendResizeMessage();
