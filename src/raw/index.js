@@ -52,7 +52,7 @@ import {
   SUPPORTED_LANGS,
   DDB_COMMON,
   TIME_PERIOD_ALL_TIME,
-  TIME_PERIOD_THREE_MONTHS,
+  DEFAULT_CHART_TIME_PERIOD,
 } from "./data/constants";
 import travelRestrictions from "./data/travelRestrictions.json"; // refer to the keys under "countries" in the i18n files for names
 import { LANGUAGES, LANGUAGE_NAMES } from "./i18n";
@@ -240,7 +240,7 @@ const initChartTimePeriodSelector = () => {
       e.preventDefault();
       document.querySelector("#time-period-all-time").classList.add("selected");
       document
-        .querySelector("#time-period-three-months")
+        .querySelector("#time-period-recent")
         .classList.remove("selected");
       CHART_TIME_PERIOD = TIME_PERIOD_ALL_TIME;
       const event = new CustomEvent("covid19japan-redraw");
@@ -248,16 +248,16 @@ const initChartTimePeriodSelector = () => {
     });
 
   document
-    .querySelector("#time-period-three-months")
+    .querySelector("#time-period-recent")
     .addEventListener("click", (e) => {
       e.preventDefault();
       document
         .querySelector("#time-period-all-time")
         .classList.remove("selected");
       document
-        .querySelector("#time-period-three-months")
+        .querySelector("#time-period-recent")
         .classList.add("selected");
-      CHART_TIME_PERIOD = TIME_PERIOD_THREE_MONTHS;
+      CHART_TIME_PERIOD = DEFAULT_CHART_TIME_PERIOD;
       const event = new CustomEvent("covid19japan-redraw");
       document.dispatchEvent(event);
     });

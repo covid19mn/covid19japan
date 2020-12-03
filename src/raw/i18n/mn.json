@@ -53,7 +53,7 @@
   "deceased-percentage": "{{percent}}% нийт тохиолдлоос",
   "tested-percentage": "{{percent}}% эерэг.",
   "active-cases": "Идэвхтэй тохиолдлууд",
-  "no-active-cases": "Идэвхтэй тохиолдол байхгүй.",
+  "no-active-cases": "Идэвхгүй",
   "data-source-in-progress": "Мэдээлэл нэгтгэх явц дуусаагүй байна.",
   "time-period": "Хугацаа",
   "all-time": "Бүх цаг",

@@ -71,7 +71,7 @@ export default function(Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: "theme-color",
-    content: ""
+    content: "#8ecafb"
   })
 
   // // Add an external JavaScript before the closing </body> tag

@@ -43,7 +43,7 @@
                 Монголын КОВИД-19 Коронавирусын Тандалт
               </h1>
               <div id="last-updated" class="last-updated my-1">
-                <span data-i18n="last-updated">Last Updated:&nbsp;</span>
+                <span data-i18n="last-updated">Last Updated:</span>&nbsp;
                 <strong id="last-updated-time" class="last-updated-time"
                   >-</strong
                 >
@@ -216,7 +216,7 @@
       <section class="chart-control embed-hide">
         <span data-i18n="time-period" class="time-period-caption">Time Period</span>: 
         <a data-i18n="all-time" id="time-period-all-time" class="time-period selected">All Time</a> |
-        <a data-i18n="three-months" id="time-period-three-months" class="time-period">3 Months</a>
+        <a data-i18n="last-month" id="time-period-recent" class="time-period">Last month</a>
       </section>
 
       <section id="national-charts" class="embed-hide">
@@ -342,7 +342,7 @@
           </div>
 
           <div id="last-updated" class="last-updated">
-            <span data-i18n="last-updated">Last Updated:&nbsp;</span>
+            <span data-i18n="last-updated">Last Updated</span>:&nbsp;
             <strong id="last-updated-time" class="last-updated-time">-</strong>
           </div>
         </div>
