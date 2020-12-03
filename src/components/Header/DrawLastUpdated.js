@@ -50,7 +50,7 @@ export function timeAgoMn(date) {
   }
   interval = seconds / 60;
   if (interval > 1) {
-    return Math.floor(interval) + " минутийн өмнө";
+    return Math.floor(interval) + " минутын өмнө";
   }
   return Math.floor(seconds) + " секундийн өмнө";
 }
