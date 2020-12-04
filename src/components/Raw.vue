@@ -353,9 +353,6 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "Hello, world!"
-  },
   mounted() {
     require("~/raw/index.js");
     let event = new CustomEvent("raw_loaded", { });
