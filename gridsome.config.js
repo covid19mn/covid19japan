@@ -14,7 +14,7 @@ function addStyleResource (rule) {
         // or if you use scss
         path.resolve(__dirname, './src/assets/sass/_globals.scss'),
         // you can also use a glob if you'd prefer
-        path.resolve(__dirname, './src/raw/index.scss'),
+        path.resolve(__dirname, './src/raw/globals.scss'),
         // or scss
         path.resolve(__dirname, './src/sass/*.scss'),
       ],
@@ -61,6 +61,23 @@ module.exports = {
           // See: https://medium.com/@amir.harel/a-b-target-classname-indexof-is-not-a-function-at-least-not-mine-8e52f7be64ca
           "a[b].target.className.indexOf is not a function",
         ]
+      }
+    },
+    {
+      use: "gridsome-plugin-i18n",
+      options: {
+        locales: [ // locales list
+          'mn',
+          'en',
+        ],
+        fallbackLocale: 'mn', // fallback language
+        defaultLocale: 'mn', // default language
+        enablePathRewrite: false, // rewrite path with locale prefix, default: true
+        rewriteDefaultLanguage: false, // rewrite default locale, default: true
+        messages: {
+          'en': require('./src/raw/i18n/en.json'), // Messages files
+          'mn': require('./src/raw/i18n/mn.json'),
+        }
       }
     }
   ]

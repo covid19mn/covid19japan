@@ -220,6 +220,7 @@ const initDataTranslate = () => {
     langPickers.forEach((pick) => {
       pick.addEventListener("click", (e) => {
         e.preventDefault();
+
         // Go up the DOM tree until we find the langPicker
         let elem = e.target;
         while (elem && (!elem.dataset || !elem.dataset.langPicker)) {
@@ -227,6 +228,9 @@ const initDataTranslate = () => {
         }
         if (elem) {
           setLang(elem.dataset.langPicker);
+
+          const event = new CustomEvent("languageChange", { detail: { locale: elem.dataset.langPicker } })
+          document.dispatchEvent(event)
         }
       });
     });

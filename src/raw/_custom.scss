@@ -16,7 +16,7 @@
   margin-bottom: 1.5rem;
 }
 
-.my-5 {
+.my-4 {
   margin-top: 2.8125rem;
   margin-bottom: 2.8125rem;
 }
@@ -33,12 +33,20 @@
   margin-top: 4rem;
 }
 
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+
 .border {
   border: 1px solid #E6E6E7;
 }
 
 .b-bottom {
   border-bottom: 1px solid #E6E6E7;
+}
+
+.text-md {
+  font-size: 1rem;
 }
 
 .in-progress {
@@ -57,9 +65,12 @@
   }
 }
 
+.no-decoration {
+  text-decoration: none;
+}
+
 .soft-text {
   color: $soft-text !important;
-  font-size: 0.75rem;
   font-weight: normal;
 }
 

@@ -58,6 +58,10 @@
   "time-period": "Time period",
   "all-time": "All time",
   "last-month": "Last month",
+  "prevention": "Prevention",
+  "symptoms": "Symptoms",
+  "medication": "Medication",
+  "general-information": "General information",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",

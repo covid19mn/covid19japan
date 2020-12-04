@@ -58,6 +58,10 @@
   "time-period": "Хугацаа",
   "all-time": "Бүх цаг",
   "last-month": "Сүүлийн сар",
+  "prevention": "Урьдчилан сэргийлэх",
+  "symptoms": "Шинж тэмдэг",
+  "medication": "Эмчилгээ",
+  "general-information": "Ерөнхий мэдээллүүд",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",

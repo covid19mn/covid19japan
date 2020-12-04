@@ -36,7 +36,7 @@
     </div>
     <header class="bg-white embed-hide border">
       <div class="container">
-        <div class="my-5">
+        <div class="my-4">
           <div class="toolbar">
             <div>
               <h1 data-i18n="covid-19-tracker" class="m-0">
@@ -285,7 +285,13 @@
       </section>
     </div>
 
-    <footer class="bg-white embed-hide border mt-5">
+    <section class="bg-white border mt-5">
+      <div class="container mb-5">
+        <Faq />
+      </div>
+    </section>
+
+    <footer class="bg-white embed-hide border">
       <div class="container">
         <div>
           <div class="links-wrapper">
@@ -306,7 +312,7 @@
 
             <section id="helpful-links" class="embed-hide">
               <a name="links">
-                <h4 data-i18n="helpful-links" class="soft-text">
+                <h4 data-i18n="helpful-links" class="soft-text text-md">
                   Helpful Links
                 </h4>
               </a>
@@ -325,7 +331,7 @@
             </section>
           </div>
         </div>
-        <div class="credits-wrapper mb-5">
+        <div class="credits-wrapper">
           <div>
             <p>
               Data sourced from Official Government Sources. (<a
@@ -352,11 +358,26 @@
 </template>
 
 <script>
+import Faq from "~/components/Faq.vue"
+
 export default {
+  components: {
+    Faq
+  },
   mounted() {
     require("~/raw/index.js");
     let event = new CustomEvent("raw_loaded", { });
     document.dispatchEvent(event);
+
+    document.addEventListener("languageChange", this.changeVueLanguage)
+  },
+  methods: {
+    changeVueLanguage(e) {
+      this.$i18n.locale = e.detail.locale
+    }
+  },
+  beforeDestroy() {
+    document.removeEventListener("languageChange", this.changeVueLanguage)
   }
 };
 </script>
