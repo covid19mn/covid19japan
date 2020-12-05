@@ -41,6 +41,13 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/questions/**/*.md',
+        typeName: 'Question'
+      },
+    },
+    {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'G-PSSYC29G00'

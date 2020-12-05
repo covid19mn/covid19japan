@@ -4,20 +4,21 @@
       <h3>{{ $t("faq-title") }}</h3>
 
       <div class="faq-source desktop-only">
-        <span class="soft-text">{{ $t("source") }}:&nbsp;</span> <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
+        <span class="soft-text">{{ $t("source") }}:&nbsp;</span>
+        <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
       </div>
     </div>
     <div class="faq-wrapper">
       <div class="faq-side">
         <div class="faq-nav b-bottom desktop-only">
           <a
-            @click="changeMenu(item)"
-            v-for="item in menus"
+            @click="changeCategory(item)"
+            v-for="item in categories"
             :key="item"
             href="#"
             class="faq-nav-item"
-            :class="item === currentMenu ? 'active' : ''"
-            >
+            :class="item === currentCategory ? 'active' : ''"
+          >
             {{ $t(item) }}
           </a>
         </div>
@@ -39,10 +40,10 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="feather feather-external-link"
-                >
+              >
                 <path
                   d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  ></path>
+                ></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
@@ -51,33 +52,62 @@
         </a>
       </div>
       <div class="faq-main">
-        <h4>{{ $t(currentMenu) }}</h4>
+        <h4>{{ $t(currentCategory) }}</h4>
 
-        <div class="faq-items">
-          <FaqItem v-for="num in [1, 2, 3, 4]" :key="num" />
+        <div class="questions">
+          <Question
+            v-for="question in questions"
+            :key="question.id"
+            v-bind="question"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
 
+<static-query>
+query {
+  allQuestion {
+    edges {
+      node {
+        id
+        title
+        content
+        category
+        locale
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
-import FaqItem from "~/components/FaqItem.vue"
+import Question from "~/components/Question.vue";
 
 export default {
   components: {
-    FaqItem
+    Question
   },
 
   data() {
     return {
-      menus: ["prevention", "symptoms", "medication", "general-information"],
-      currentMenu: "prevention"
+      categories: ["prevention", "symptoms", "medication", "general-information"],
+      currentCategory: "prevention"
     };
   },
   methods: {
-    changeMenu(menu) {
-      this.currentMenu = menu
+    changeCategory(category) {
+      this.currentCategory = category;
+    }
+  },
+  computed: {
+    questions() {
+      return this.$static.allQuestion.edges.map(e => {
+        return e.node;
+      }).filter(question => {
+        return question.category === this.currentCategory && question.locale === this.$i18n.locale
+      });
     }
   }
 };
@@ -135,7 +165,7 @@ export default {
   flex-grow: 1;
 }
 
-.faq-items {
+.questions {
   margin-top: 2rem;
 }
 

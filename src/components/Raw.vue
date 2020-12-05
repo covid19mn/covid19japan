@@ -287,7 +287,7 @@
 
     <section class="bg-white border mt-5">
       <div class="container mb-5">
-        <Faq />
+        <FaqSection />
       </div>
     </section>
 
@@ -358,11 +358,11 @@
 </template>
 
 <script>
-import Faq from "~/components/Faq.vue"
+import FaqSection from "~/components/FaqSection.vue"
 
 export default {
   components: {
-    Faq
+    FaqSection
   },
   mounted() {
     require("~/raw/index.js");
