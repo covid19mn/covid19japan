@@ -1,5 +1,5 @@
 <template>
-  <a href="#" class="faq-item b-bottom" @click.prevent="collapseToggle">
+  <a href="#" class="question b-bottom" @click.prevent="collapseToggle">
     <div class="collapseToggle" href="#">
       <p class="m-0">{{ title }}</p>
 
@@ -43,13 +43,29 @@ export default {
 }
 </script>
 
+<style lang=scss>
+.question__content {
+  font-size: 0.875rem;
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.25em;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
-.faq-item {
+.question {
   display: block;
   text-decoration: none;
 }
 
 .collapseToggle {
+  color: #353A3F;
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;

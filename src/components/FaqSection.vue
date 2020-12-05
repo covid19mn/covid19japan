@@ -3,7 +3,7 @@
     <div class="faq-title-wrapper b-bottom">
       <h3>{{ $t("faq-title") }}</h3>
 
-      <div class="faq-source desktop-only">
+      <div class="faq-source">
         <span class="soft-text">{{ $t("source") }}:&nbsp;</span>
         <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
       </div>
@@ -22,10 +22,9 @@
             {{ $t(item) }}
           </a>
         </div>
-        <a href="#" class="faq-contact no-decoration">
+        <a href="https://covid19.mohs.mn/p/cat/post/52" target="_blank" class="faq-contact no-decoration">
           <div>
-            Дэлгэрэнгүй мэдээлэл, зөвлөгөө өгөх эрүүл мэндийн байгууллагуудын
-            утасны дугаарыг авах
+            {{ $t("health-organization-more-info") }}
           </div>
           <div>
             <div style="margin-left:1rem">
@@ -123,6 +122,7 @@ export default {
 }
 
 .faq-side {
+  min-width: 256px;
   max-width: 256px;
 }
 
@@ -166,10 +166,20 @@ export default {
 }
 
 .questions {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: $breakpoint-960) {
+  .faq-source {
+    font-size: 0.8em;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-title-wrapper {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
   .faq-wrapper {
     flex-direction: column-reverse;
   }
