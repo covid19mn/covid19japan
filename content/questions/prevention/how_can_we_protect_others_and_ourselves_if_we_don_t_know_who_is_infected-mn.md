@@ -1,4 +1,5 @@
 ---
+order: 1
 title: Ковид-19  халдвараас сэргийлэх хамгийн энгийн арга юу вэ?
 category: prevention
 locale: mn

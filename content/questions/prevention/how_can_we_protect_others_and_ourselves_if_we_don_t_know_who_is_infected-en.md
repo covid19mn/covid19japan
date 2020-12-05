@@ -1,4 +1,5 @@
 ---
+order: 1
 title: How can we protect others and ourselves if we don't know who is infected?
 category: prevention
 locale: en
