@@ -106,7 +106,7 @@ export default {
         return e.node;
       }).filter(question => {
         return question.category === this.currentCategory && question.locale === this.$i18n.locale
-      });
+      }).sort((q1, q2) => (q1.order - q2.order) ? 1 : -1);
     }
   }
 };
