@@ -62,6 +62,9 @@
   "symptoms": "Symptoms",
   "medication": "Medication",
   "general-information": "General information",
+  "source": "Source",
+  "WHO": "WHO",
+  "faq-title": "Frequently asked questions about COVID-19",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",

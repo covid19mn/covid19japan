@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="faq-title-wrapper b-bottom">
-      <h3>Ковид-19 халдвартай холбоотой нийтлэг асуулт, хариултууд</h3>
+      <h3>{{ $t("faq-title") }}</h3>
 
       <div class="faq-source desktop-only">
-        <span class="soft-text">Эх сурвалж:&nbsp;</span> <a target="_blank" href="https://www.who.int/">ДЭМБ</a>
+        <span class="soft-text">{{ $t("source") }}:&nbsp;</span> <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
       </div>
     </div>
     <div class="faq-wrapper">

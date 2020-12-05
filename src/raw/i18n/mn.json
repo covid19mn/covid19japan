@@ -14,7 +14,7 @@
   "cases-none": "Илэрцгүй",
   "cases-range": "{{from}}-{{to}} тохиолдол",
   "cases-last": "{{from}}+ тохиолдол",
-  "outbreak-spread-trend": "Нийт Тохиолдол",
+  "outbreak-spread-trend": "Нийт тохиолдол",
   "new-cases-by-day": "Өдөр тутамд илэрсэн тохиолдол",
   "top-prefectures": "Их 10 аймаг",
   "active-regions": "Хамгийн идэвхтэй бүсүүд",
@@ -62,6 +62,9 @@
   "symptoms": "Шинж тэмдэг",
   "medication": "Эмчилгээ",
   "general-information": "Ерөнхий мэдээллүүд",
+  "source": "Эх сурвалж",
+  "WHO": "ДЭМБ",
+  "faq-title": "Ковид-19 халдвартай холбоотой нийтлэг асуулт, хариултууд",
   "pseudo-prefectures": {
     "port-of-entry": "Port of Entry",
     "unspecified": "Unspecified",

@@ -73,11 +73,8 @@ module.exports = {
         fallbackLocale: 'mn', // fallback language
         defaultLocale: 'mn', // default language
         enablePathRewrite: false, // rewrite path with locale prefix, default: true
+        enablePathGeneration: false,
         rewriteDefaultLanguage: false, // rewrite default locale, default: true
-        messages: {
-          'en': require('./src/raw/i18n/en.json'), // Messages files
-          'mn': require('./src/raw/i18n/mn.json'),
-        }
       }
     }
   ]

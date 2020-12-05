@@ -4,7 +4,7 @@
 import DefaultLayout from "~/layouts/Default.vue";
 import VueI18n from "vue-i18n"
 
-export default function(Vue, { router, head, isClient }) {
+export default function(Vue, { router, head, isClient, appOptions }) {
 
   // // Add an external CSS file
   head.link.push({
@@ -80,6 +80,9 @@ export default function(Vue, { router, head, isClient }) {
     src: "https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js",
     body: true
   });
+
+  appOptions.i18n.setLocaleMessage('en', require('~/raw/i18n/en.json'))
+  appOptions.i18n.setLocaleMessage('mn', require('~/raw/i18n/mn.json'))
 
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
