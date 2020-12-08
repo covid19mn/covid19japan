@@ -2,7 +2,7 @@
 order: 3
 title: "Ковид-19-ийн халдварын хүндэрсэн үеийн түгээмэл шинж тэмдгүүд:"
 category: symptoms
-locale: en
+locale: mn
 ---
 
 - Амьсгал давчдах
