@@ -3,6 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VueI18n from "vue-i18n"
+import "~/raw/index.scss"
 
 export default function(Vue, { router, head, isClient, appOptions }) {
 

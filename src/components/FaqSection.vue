@@ -1,65 +1,76 @@
 <template>
-  <div>
-    <div class="faq-title-wrapper b-bottom">
-      <h3>{{ $t("faq-title") }}</h3>
+  <div class="container faq-section">
+    <div class="desktop-only">
+      <div class="faq-title-wrapper b-bottom">
+        <h3>{{ $t("faq-title") }}</h3>
 
-      <div class="faq-source">
-        <span class="soft-text">{{ $t("source") }}:&nbsp;</span>
-        <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
+        <div class="faq-source">
+          <span class="soft-text">{{ $t("source") }}:&nbsp;</span>
+          <a target="_blank" href="https://www.who.int/">{{ $t("WHO") }}</a>
+        </div>
       </div>
-    </div>
-    <div class="faq-wrapper">
-      <div class="faq-side">
-        <div class="faq-nav b-bottom desktop-only">
-          <a
-            @click="changeCategory(item)"
-            v-for="item in categories"
-            :key="item"
-            href="#"
-            class="faq-nav-item"
-            :class="item === currentCategory ? 'active' : ''"
-          >
-            {{ $t(item) }}
+      <div class="faq-wrapper">
+        <div class="faq-side">
+          <div class="faq-nav b-bottom">
+            <a
+              @click="changeCategory(item)"
+              v-for="item in categories"
+              :key="item"
+              href="#"
+              class="faq-nav-item"
+              :class="item === currentCategory ? 'active' : ''"
+              >
+              {{ $t(item) }}
+            </a>
+          </div>
+          <a href="https://covid19.mohs.mn/p/cat/post/52" target="_blank" class="faq-contact no-decoration">
+            <div>
+              {{ $t("health-organization-more-info") }}
+            </div>
+            <div>
+              <div style="margin-left:1rem">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-external-link"
+                  >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+            </div>
           </a>
         </div>
-        <a href="https://covid19.mohs.mn/p/cat/post/52" target="_blank" class="faq-contact no-decoration">
-          <div>
-            {{ $t("health-organization-more-info") }}
-          </div>
-          <div>
-            <div style="margin-left:1rem">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-external-link"
-              >
-                <path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="faq-main">
-        <h4>{{ $t(currentCategory) }}</h4>
+        <div class="faq-main">
+          <h4>{{ $t(currentCategory) }}</h4>
 
-        <div class="questions">
-          <Question
-            v-for="question in questions"
-            :key="question.id"
-            v-bind="question"
-          />
+          <div class="questions">
+            <Question
+              v-for="question in questions"
+              :key="question.id"
+              v-bind="question"
+              />
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="faq-link">
+      {{ $t("faq-title") }}
+
+      <div>
+        <g-link to="/faq" tag="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </g-link>
       </div>
     </div>
   </div>
@@ -143,15 +154,6 @@ export default {
   }
 }
 
-.faq-contact {
-  display: flex;
-  margin-top: 1rem;
-  background: #f7f7f7;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  padding: 1rem;
-}
-
 .faq-source {
   font-size: 0.875rem;
 }
@@ -163,6 +165,29 @@ export default {
 .faq-main {
   margin-left: 3.5rem;
   flex-grow: 1;
+}
+
+.faq-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+  font-weight: bold;
+
+  & > div {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  button {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+
+    background: #142F8F;
+    border-radius: 4px;
+  }
 }
 
 .questions {
@@ -195,6 +220,16 @@ export default {
 
 @media (max-width: $breakpoint-960) {
   .desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: $breakpoint-960) {
+  .faq-section {
+    margin-bottom: 4rem;
+  }
+
+  .faq-link {
     display: none !important;
   }
 }
