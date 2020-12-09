@@ -80,8 +80,7 @@ module.exports = {
         fallbackLocale: 'mn', // fallback language
         defaultLocale: 'mn', // default language
         enablePathRewrite: false, // rewrite path with locale prefix, default: true
-        enablePathGeneration: false,
-        rewriteDefaultLanguage: false, // rewrite default locale, default: true
+        enablePathGeneration: true,
       }
     }
   ]

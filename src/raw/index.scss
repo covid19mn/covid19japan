@@ -168,6 +168,7 @@ a, a:hover, a:visited {
     width: 50%;
   }
   #daily-increase-container { 
+    margin-top: 0 !important;
     margin-left: 0.75rem;
     flex: 1;
     width: 50%;
@@ -398,6 +399,10 @@ img.emoji {
     stroke-dasharray: 0 0;
     stroke: #f0f0f0 !important;
   }
+}
+
+#daily-increase-container {
+  margin-top: 1rem;
 }
 
 #daily-increase-chart {

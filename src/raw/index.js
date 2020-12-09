@@ -34,8 +34,6 @@ import {
   drawTopRegions,
 } from "./components/RegionalCharts/RegionalCharts";
 
-const DEFAULT_LANGUAGE = "mn";
-
 const {
   toggleLangPicker,
   updateTooltipLang,
@@ -140,8 +138,6 @@ const setLang = (lng) => {
     }
   }
 
-  toggleLangPicker(LANG);
-
   updatePageDirectionClass(i18next.dir(LANG));
 
   // set i18n framework lang
@@ -196,45 +192,11 @@ const setLang = (lng) => {
   });
 };
 
-const populateLanguageSelector = () => {
-  const parent = document.getElementsByClassName("lang-picker-languages")[0];
-  parent.innerHTML = "";
-  for (let i in LANGUAGES) {
-    parent.innerHTML =
-      parent.innerHTML +
-      `<a href="#" class="lang-picker-button" data-lang-picker='${LANGUAGES[i]}'>${LANGUAGE_NAMES[i]}</a> `;
-  }
-};
-
-const initDataTranslate = () => {
+const initDataTranslate = (locale) => {
   // load translation framework
   i18next.init(LANG_CONFIG).then(() => {
-    setLang(DEFAULT_LANGUAGE);
+    setLang(locale);
   });
-
-  populateLanguageSelector();
-
-  // Language selector event handler
-  const langPickers = document.querySelectorAll("[data-lang-picker]");
-  if (langPickers) {
-    langPickers.forEach((pick) => {
-      pick.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        // Go up the DOM tree until we find the langPicker
-        let elem = e.target;
-        while (elem && (!elem.dataset || !elem.dataset.langPicker)) {
-          elem = elem.parentElement;
-        }
-        if (elem) {
-          setLang(elem.dataset.langPicker);
-
-          const event = new CustomEvent("languageChange", { detail: { locale: elem.dataset.langPicker } })
-          document.dispatchEvent(event)
-        }
-      });
-    });
-  }
 };
 
 const initChartTimePeriodSelector = () => {
@@ -374,7 +336,7 @@ const sendResizeMessage = () => {
   );
 };
 
-document.addEventListener("covid19japan-redraw", () => {
+const redraw = () => {
   callIfUpdated(() => drawKpis(ddb.totals, ddb.totalsDiff, LANG));
   if (!document.body.classList.contains("embed")) {
     callIfUpdated(() => drawLastUpdated(ddb.lastUpdated, LANG));
@@ -410,17 +372,31 @@ document.addEventListener("covid19japan-redraw", () => {
   }
 
   callIfUpdated(() => whenMapAndDataReady());
-});
+}
 
-document.addEventListener("raw_loaded", () => {
+document.addEventListener("covid19japan-redraw", redraw);
+
+document.addEventListener("languageChange", (e => {
+  setLang(e.detail.lang)
+}))
+
+document.addEventListener("raw_loaded", (e) => {
   if (window.location.href.indexOf("nomap") != -1) {
-    PAGE_STATE.mapShouldLoad = false;
+    PAGE_STATE.mapShouldLoad = locale;
   }
   initMap();
   loadDataOnPage();
-  initDataTranslate();
+  initDataTranslate(e.detail.context.$i18n.locale);
   initChartTimePeriodSelector();
   setTimeout(recursiveDataLoad, FIVE_MINUTES_IN_MS);
   startReloadTimer();
   sendResizeMessage();
 });
+
+document.addEventListener("reset_raw", () => {
+  PAGE_STATE.map = false
+  PAGE_STATE.mapLoaded = false
+  PAGE_STATE.mapShouldLoad = true
+  PAGE_STATE.styleLoaded = false
+  PAGE_STATE.dataLoaded = false
+})

@@ -49,9 +49,7 @@
                 >
               </div>
             </div>
-            <div class="lang-picker">
-              <span class="lang-picker-languages"> </span>
-            </div>
+            <LanguageSelector />
           </div>
         </div>
       </div>
@@ -357,17 +355,17 @@
 
 <script>
 import FaqSection from "~/components/FaqSection.vue"
+import LanguageSelector from "~/components/LanguageSelector.vue"
 
 export default {
   components: {
-    FaqSection
+    FaqSection,
+    LanguageSelector
   },
   mounted() {
     require("~/raw/index.js");
-    let event = new CustomEvent("raw_loaded", { });
+    let event = new CustomEvent("raw_loaded", { detail: { context: this } });
     document.dispatchEvent(event);
-
-    document.addEventListener("languageChange", this.changeVueLanguage)
   },
   methods: {
     changeVueLanguage(e) {
@@ -375,7 +373,8 @@ export default {
     }
   },
   beforeDestroy() {
-    document.removeEventListener("languageChange", this.changeVueLanguage)
+    let event = new CustomEvent("reset_raw", { });
+    document.dispatchEvent(event);
   }
 };
 </script>
