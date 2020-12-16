@@ -73,6 +73,7 @@
     "nagasaki-cruise": "Nagasaki Cruise Ship"
   },
   "prefectures": {
+    "Unknown": "Unknown",
     "Suhbaatar": "Sukhbaatar",
     "Chingeltei": "Chingeltei",
     "Songinokhairkhan": "Songinokhairkhan",
