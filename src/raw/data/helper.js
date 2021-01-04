@@ -1,4 +1,5 @@
 const FOREIGN_CITIZIN_COUNT = 9;
+const DECEASE_COUNT = 1
 
 export const calculateTotals = (daily) => {
   // Calculate the totals
@@ -25,7 +26,7 @@ export const calculateTotals = (daily) => {
   totals.confirmed = latest.confirmedCumulative;
   totals.recovered = latest.recoveredCumulative;
   totals.deceased = latest.deceasedCumulative;
-  totals.active = latest.activeCumulative - FOREIGN_CITIZIN_COUNT - totals.deceased;
+  totals.active = latest.activeCumulative - FOREIGN_CITIZIN_COUNT - DECEASE_COUNT;
 
   totalsDiff.tested = latest.tested;
   totalsDiff.critical = latest.critical;
