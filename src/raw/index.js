@@ -270,7 +270,7 @@ const initMap = () => {
     setTimeout(initMap, 3000);
     return;
   }
-  console.log("Initializing map.");
+
   doInitMap();
 };
 
