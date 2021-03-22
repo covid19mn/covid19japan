@@ -99,7 +99,8 @@
     "Altanbulag": "Altanbulag",
     "Mandal": "Mandal",
     "Uliastai": "Uliastai",
-    "Zuunmod": "Zuunmod"
+    "Zuunmod": "Zuunmod",
+    "Murun": "Murun"
   },
   "regions": {
     "Ulaanbaatar": "Ulaanbaatar",
@@ -127,7 +128,8 @@
     "Umnugovi": "Umnugovi",
     "Uvs": "Uvs",
     "Uvurkhangai": "Uvurkhangai",
-    "Zavkhan": "Zavkhan"
+    "Zavkhan": "Zavkhan",
+    "Khuvsgul": "Khuvsgul"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
