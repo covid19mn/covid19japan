@@ -310,7 +310,7 @@
           </div>
 
           <div id="last-updated" class="last-updated">
-            <span data-i18n="last-updated">Last Updated</span>:&nbsp;
+            <span data-i18n="last-updated">Last Updated</span>&nbsp;
             <strong id="last-updated-time" class="last-updated-time">-</strong>
           </div>
         </div>
