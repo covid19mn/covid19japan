@@ -8,6 +8,7 @@
   "kpi-deceased": "Нас барсан",
   "kpi-tested": "Шинжилгээ хийсэн",
   "kpi-confirmed": "Батлагдсан",
+  "kpi-confirmed-tooltip": "Батлагдсан тоонд нас барсан тохиолдлуудыг нэмж оруулсан болно",
   "kpi-recovered": "Эдгэрсэн",
   "covid-19": "КОВИД-19",
   "outbreak-map": "Илэрцийн газрын зураг",
@@ -47,7 +48,7 @@
   "active-chart-caption": "Нийт идэвхтэй тохиолдол",
   "recovered-chart-caption": "Өдөр тутмын эдгэрэлт",
   "deceased-chart-caption": "Өдөр тутмын нас баралт",
-  "tested-chart-caption": "Нийт хийгдсэн тест",
+  "tested-chart-caption": "Өдөр тутмын шинжилгээ",
   "active-critical-percentage": "{{percent}}% <b>хүнд нөхцөлд</b> байгаа.",
   "recovered-percentage": "{{percent}}% нийт тохиолдлоос",
   "deceased-percentage": "{{percent}}% нийт тохиолдлоос",
@@ -99,7 +100,8 @@
     "Mandal": "Мандал",
     "Uliastai": "Улиастай",
     "Zuunmod": "Зуунмод",
-    "Murun": "Мөрөн"
+    "Murun": "Мөрөн",
+    "Arvaikheer": "Арвайхээр"
   },
   "regions": {
     "Ulaanbaatar": "Улаанбаатар",
@@ -128,7 +130,8 @@
     "Uvs": "Увс",
     "Uvurkhangai": "Өвөрхангай",
     "Zavkhan": "Завхан",
-    "Khuvsgul": "Хөвсгөл"
+    "Khuvsgul": "Хөвсгөл",
+    "Uvurkhangai": "Өвөрхангай"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"

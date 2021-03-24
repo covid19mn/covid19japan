@@ -23,7 +23,12 @@
 
     <div id="page">
       <section id="kpi" class="loading my-3">
-        <div class="kpi-box" id="kpi-confirmed">
+        <div 
+          class="kpi-box" 
+          id="kpi-confirmed"
+          data-tippy-i18n="kpi-confirmed-tooltip"
+          data-tippy-placement="bottom"
+        >
           <div class="value-wrapper">
             <div class="value"><div class="lds-dual-ring"></div></div>
             <div class="diff">&nbsp;</div>
@@ -296,10 +301,7 @@
         <div class="credits-wrapper">
           <div>
             <p>
-              Data sourced from Official Government Sources. (<a
-                href="https://covid19.mohs.mn"
-                >Full Details</a
-              >.)
+                Мэдээллийн эх сурвалжаар "Онцгой байдлын ерөнхий газар" хамтран ажиллав
             </p>
             <p style="margin-bottom:0">
               This project is made possible by

@@ -8,6 +8,7 @@
   "kpi-deceased": "Deaths",
   "kpi-tested": "Tested",
   "kpi-confirmed": "Confirmed",
+  "kpi-confirmed-tooltip": "Confirmed cases are inclusive of deceased cases",
   "kpi-recovered": "Recovered",
   "covid-19": "COVID-19",
   "outbreak-map": "Outbreak Map",
@@ -100,7 +101,8 @@
     "Mandal": "Mandal",
     "Uliastai": "Uliastai",
     "Zuunmod": "Zuunmod",
-    "Murun": "Murun"
+    "Murun": "Murun",
+    "Arvaikheer": "Arvaikheer"
   },
   "regions": {
     "Ulaanbaatar": "Ulaanbaatar",
@@ -129,7 +131,8 @@
     "Uvs": "Uvs",
     "Uvurkhangai": "Uvurkhangai",
     "Zavkhan": "Zavkhan",
-    "Khuvsgul": "Khuvsgul"
+    "Khuvsgul": "Khuvsgul",
+    "Uvurkhangai": "Uvurkhangai"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
