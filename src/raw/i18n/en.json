@@ -103,7 +103,8 @@
     "Zuunmod": "Zuunmod",
     "Murun": "Murun",
     "Arvaikheer": "Arvaikheer",
-    "Ulaangom": "Ulaangom"
+    "Ulaangom": "Ulaangom",
+    "Bayankhongor": "Bayankhongor"
   },
   "regions": {
     "Ulaanbaatar": "Ulaanbaatar",
@@ -133,7 +134,8 @@
     "Uvurkhangai": "Uvurkhangai",
     "Zavkhan": "Zavkhan",
     "Khuvsgul": "Khuvsgul",
-    "Uvurkhangai": "Uvurkhangai"
+    "Uvurkhangai": "Uvurkhangai",
+    "Bayankhongor": "Bayankhongor"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
