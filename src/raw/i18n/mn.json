@@ -103,7 +103,9 @@
     "Murun": "Мөрөн",
     "Arvaikheer": "Арвайхээр",
     "Ulaangom": "Улаангом",
-    "Bayankhongor": "Баянхонгор"
+    "Bayankhongor": "Баянхонгор",
+    "Undurkhaan": "Өндөрхаан",
+    "Bulgan": "Булган"
   },
   "regions": {
     "Ulaanbaatar": "Улаанбаатар",
@@ -134,7 +136,9 @@
     "Zavkhan": "Завхан",
     "Khuvsgul": "Хөвсгөл",
     "Uvurkhangai": "Өвөрхангай",
-    "Bayankhongor": "Баянхонгор"
+    "Bayankhongor": "Баянхонгор",
+    "Khentii": "Хэнтий",
+    "Bulgan": "Булган"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
