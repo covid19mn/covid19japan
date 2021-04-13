@@ -108,7 +108,8 @@
     "Bulgan": "Булган",
     "Khovd": "Ховд",
     "Baruun-Urt": "Баруун-Урт",
-    "Choibalsan": "Чойбалсан"
+    "Choibalsan": "Чойбалсан",
+    "Mandalgovi": "Мандалговь"
   },
   "regions": {
     "Ulaanbaatar": "Улаанбаатар",
@@ -135,8 +136,7 @@
     "Umnugovi": "Өмнөговь",
     "Uvs": "Увс",
     "Uvurkhangai": "Өвөрхангай",
-    "Zavkhan": "Завхан",
-    "Dornog": "Дорнод"
+    "Zavkhan": "Завхан"
   },
   "countries": {
     "westerdam": "Westerdam (Cruise Ship)"
