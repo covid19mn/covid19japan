@@ -25,11 +25,11 @@ export const PREFECTURE_PAINT = ["match", ["get", "name"]];
 
 export const MAP_COLOR_BOUNDARIES = {
   1: COLOR_NONE,
-  5: COLOR_YELLOW,
-  10: COLOR_ORANGE,
-  50: COLOR_RED,
-  100: COLOR_DARK_RED,
-  Infinity: COLOR_DARK_BURGUNDY,
+  50: COLOR_YELLOW,
+  100: COLOR_ORANGE,
+  500: COLOR_RED,
+  1000: COLOR_DARK_RED,
+  Infinity: COLOR_DARK_BURGUNDY
 };
 export const LEGEND_CLASSES = ["none", "one", "two", "three", "four", "five"];
 
@@ -39,16 +39,16 @@ export const LANG_CONFIG = {
   detection: {
     order: ["querystring", "cookie", "navigator"],
     caches: ["cookie"],
-    cookieMinutes: 60 * 24 * 365,
+    cookieMinutes: 60 * 24 * 365
   },
-  resources: languageResources,
+  resources: languageResources
 };
 
 export const CHART_TITLE_PADDING = {
   top: 0,
   right: 0,
   bottom: 20,
-  left: 20,
+  left: 20
 };
 
 export const DDB_COMMON = {
@@ -59,13 +59,13 @@ export const DDB_COMMON = {
     recovered: 0,
     deceased: 0,
     tested: 0,
-    critical: 0,
+    critical: 0
   },
   totalsDiff: {
     confirmed: 0,
     recovered: 0,
     deceased: 0,
     tested: 0,
-    critical: 0,
-  },
+    critical: 0
+  }
 };
